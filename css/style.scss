@@ -342,8 +342,8 @@
 }
 
 .home-about {
-    background: #f9f9fb url(../images/home-about-bg.jpg) no-repeat;
-    background-size: cover;
+    background: #f9f9fb url(../images/home-about-bg.jpg) no-repeat center;
+    background-size:cover;
     height: 908px;
     & > div {
         height: 100%;
