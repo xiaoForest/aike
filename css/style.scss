@@ -396,5 +396,25 @@
                 }
             }
         }
+        .view-details {
+            width: 180px;
+            height: 48px;
+            font-size: 14px;
+            line-height: 1;
+            color: #fff;
+            background: linear-gradient(45deg, #019146, #1cb063);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px 0px rgba(5, 149, 74, 0.5);
+            transition: all .5s ease;
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
     }
 }
+@media (max-width: 1366px){}
+@media (max-width: 1300px){}
+@media (max-width: 1199px){}
+@media (max-width: 768px){}
