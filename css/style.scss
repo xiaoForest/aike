@@ -381,6 +381,7 @@
                 dt {
                     font-size: 22px;
                     strong {
+                        margin-right: 3px;
                         color: #000;
                         font-family: MR;
                         font-size: 66px;
@@ -414,7 +415,85 @@
         }
     }
 }
-@media (max-width: 1366px){}
+@media (max-width: 1366px){
+    .home-about {
+        height: 708px;
+    }
+    .home-about > div .headline {
+        font-size: 38px;
+    }
+    .home-about > div .subheading {
+        font-size: 28px;
+    }
+    .home-about > div .text {
+        font-size: 16px;
+    }
+    .home-about > div .data {
+        width: 70%;
+        margin: 50px 0;
+    }
+    .home-about > div .data dl dt {
+        font-size: 20px;
+    }
+    .home-about > div .data dl dt strong {
+        font-size: 46px;
+    }
+    .home-about > div .data dl dd {
+        font-size: 18px;
+    }
+    .home-about > div .view-details {
+        width: 150px;
+        height: 42px;
+    }
+}
 @media (max-width: 1300px){}
-@media (max-width: 1199px){}
-@media (max-width: 768px){}
+@media (max-width: 1199px){
+    .home-about > div .data {
+        width: 90%;
+        margin: 40px 0;
+    }
+    .home-about > div .text {
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    .home-about {
+        height: 600px;
+        background: #f9f9fb url(../images/home-about-bg.jpg) no-repeat right -265px top 0;
+        background-size: cover;
+    }
+    .home-about > div .headline {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .home-about > div .subheading {
+        font-size: 18px;
+    }
+    .home-about > div .text {
+        margin-top: 10px;
+        font-size: 14px;
+        width: 100%;
+    }
+    .home-about > div .data {
+        width: 100%;
+        margin: 30px 0;
+    }
+    .home-about > div .data dl {
+        width: 25%;
+        text-align: center;
+    }
+    .home-about > div .data dl dt {
+        font-size: 14px;
+    }
+    .home-about > div .data dl dt strong {
+        font-size: 24px;
+    }
+    .home-about > div .data dl dd {
+        font-size: 14px;
+    }
+    .home-about > div .view-details {
+        width: 120px;
+        height: 42px;
+        font-size: 12px;
+    }
+}
