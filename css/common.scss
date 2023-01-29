@@ -26,6 +26,10 @@
     font-family: "ML";
     src: url("../fonts/MiSans-Light.ttf");
 }
+@font-face {
+    font-family: "MM";
+    src: url("../fonts/MiSans-Medium.ttf");
+}
 $color: #c9171d;
 $green: #0d9f53;
 @mixin transition($type...) {

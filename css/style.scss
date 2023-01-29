@@ -341,6 +341,43 @@
     }
 }
 
+.plate-head {
+    .headline {
+        margin-bottom: 16px;
+        font-family: MR;
+        font-size: 48px;
+        line-height: 1;
+        color: #000;
+    }
+    .subheading {
+        font-family: ML;
+        font-size: 40px;
+        line-height: 1;
+        color: #000;
+        font-weight: normal;
+    }
+}
+@media (max-width: 1366px) {
+    .plate-head {
+        .headline {
+            font-size: 38px;
+        }
+        .subheading {
+            font-size: 28px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .plate-head {
+        .headline {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        .subheading {
+            font-size: 18px;
+        }
+    }
+}
 .home-about {
     background: #f9f9fb url(../images/home-about-bg.jpg) no-repeat center;
     background-size: cover;
@@ -350,20 +387,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        .headline {
-            margin-bottom: 16px;
-            font-family: MR;
-            font-size: 48px;
-            line-height: 1;
-            color: #000;
-        }
-        .subheading {
-            font-family: ML;
-            font-size: 40px;
-            line-height: 1;
-            color: #000;
-            font-weight: normal;
-        }
         .text {
             width: 84%;
             margin-top: 30px;
@@ -470,8 +493,6 @@
         height: 42px;
     }
 }
-@media (max-width: 1300px) {
-}
 @media (max-width: 1199px) {
     .home-about > div .data {
         width: 95%;
@@ -526,5 +547,178 @@
         width: 120px;
         height: 42px;
         font-size: 12px;
+    }
+}
+
+.home-product {
+    .plate-head {
+        text-align: center;
+        padding: 100px 0 70px;
+    }
+}
+@media (max-width: 1366px) {
+    .home-product {
+        .plate-head {
+            padding: 70px 0 40px;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .home-product {
+        .plate-head {
+            padding: 40px 0 30px;
+        }
+    }
+}
+.home-product {
+    .product-ul {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            position: relative;
+            width: 50%;
+            background: #efefef;
+            transition: all 0.5s ease-out;
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(5) {
+                background: #fbfbfb;
+            }
+            .halo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background: #029246 url(../images/halo.png) no-repeat center center;
+                background-size: cover;
+                transition: all 0.4s ease;
+            }
+            &:hover {
+                background: #029246;
+                .halo {
+                    opacity: 1;
+                }
+                .box {
+                    .info-wrap {
+                        .info {
+                            &.info1 {
+                                opacity: 0;
+                                height: 0;
+                            }
+                            &.info2 {
+                                opacity: 1;
+                            }
+                            &:hover {
+                                .understand-details {
+                                    .icon {
+                                        .icon-svg {
+                                            transform: rotate(-45deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .box {
+                position: relative;
+                height: 360px;
+                width: 29vw;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .info-wrap {
+                    position: relative;
+                    height: 360px;
+                    overflow: hidden;
+                    .info {
+                        height: 360px;
+                        transition: all 0.6s ease;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        &.info1 {
+                            opacity: 1;
+                        }
+                        &.info2 {
+                            opacity: 0;
+                            .tit {
+                                color: #fff;
+                            }
+                        }
+                        .tit {
+                            position: relative;
+                            display: block;
+                            font-family: MR;
+                            line-height: 1;
+                            font-size: 34px;
+                            color: #000;
+                            font-weight: bold;
+                            transition: all 0.3s ease 0.3s;
+                        }
+                        .english {
+                            display: block;
+                            margin-top: 16px;
+                            font-family: MM;
+                            line-height: 1;
+                            font-size: 18px;
+                            color: #999;
+                            transition: all 0.3s ease;
+                        }
+                        .text {
+                            margin-top: 20px;
+                            transition: all 0.3s ease 0.6s;
+                            p {
+                                font-size: 18px;
+                                line-height: 1.8;
+                                color: #fff;
+                                font-family: MM;
+                                opacity: 0.8;
+                                transition: all 0.3s ease;
+                            }
+                        }
+                        .understand-details {
+                            margin-top: 20px;
+                            align-items: center;
+                            transition: all 0.6s ease 0.9s;
+                            display: flex;
+                            .icon {
+                                width: 42px;
+                                height: 42px;
+                                background: #fff;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .icon-svg {
+                                    fill: #07974b;
+                                    width: 30px;
+                                    height: 30px;
+                                    display: flex;
+                                    transform: rotate(0);
+                                    transition: all 0.3s ease;
+                                }
+                            }
+                            p {
+                                margin-left: 10px;
+                                font-family: MM;
+                                font-size: 16px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .pic {
+                img {
+                    background-size: contain;
+                }
+            }
+        }
     }
 }
