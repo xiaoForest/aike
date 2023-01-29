@@ -267,7 +267,27 @@ $green: #0d9f53;
         background: #fff;
         height: 90px;
         box-shadow: rgb(242, 242, 242) 0px 2px 2px 0px;
- 
+        .control {
+            .social {
+                .annulus {
+                    .item {
+                        background: #ebedf1;
+                        &:hover.item-qr {
+                            background: #259f3d;
+                            .icon-svg {
+                                fill: #fff;
+                            }
+                        }
+                        &:hover.item-tao {
+                            background: rgb(252, 136, 72);
+                            .icon-svg {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .logo {
         a {
@@ -400,12 +420,12 @@ $green: #0d9f53;
                             height: 0;
                             border-left: 10px solid transparent;
                             border-right: 10px solid transparent;
-                            border-bottom: 10px solid #fff;
+                            border-bottom: 10px solid rgb(249, 249, 249);
                         }
                         .primary {
                             width: 103px;
                             height: 112px;
-                            background: #fff;
+                            background: rgb(249, 249, 249);
                             display: flex;
                             flex-direction: column;
                             align-items: center;
