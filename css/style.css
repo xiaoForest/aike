@@ -385,9 +385,15 @@
 }
 .home-about > div .data dl dt strong.special {
   color: #06974b;
+  text-shadow: #2cc976 2px 12px 13px;
+}
+.home-about > div .data dl dt span {
+  font-size: 34px;
 }
 .home-about > div .data dl dd {
+  margin-top: 2px;
   font-size: 20px;
+  line-height: 1.4;
   font-family: MN;
 }
 .home-about > div .view-details {
@@ -407,6 +413,21 @@
   transform: translateY(-5px);
 }
 
+@media (max-width: 1740px) {
+  .home-about > div .data {
+    width: 60%;
+  }
+}
+@media (max-width: 1560px) {
+  .home-about > div .data {
+    width: 70%;
+  }
+}
+@media (max-width: 1440px) {
+  .home-about > div .data {
+    width: 75%;
+  }
+}
 @media (max-width: 1366px) {
   .home-about {
     height: 708px;
@@ -430,6 +451,9 @@
   .home-about > div .data dl dt strong {
     font-size: 46px;
   }
+  .home-about > div .data dl dt span {
+    font-size: 28px;
+  }
   .home-about > div .data dl dd {
     font-size: 18px;
   }
@@ -440,7 +464,7 @@
 }
 @media (max-width: 1199px) {
   .home-about > div .data {
-    width: 90%;
+    width: 95%;
     margin: 40px 0;
   }
   .home-about > div .text {
@@ -454,8 +478,8 @@
     background-size: cover;
   }
   .home-about > div .headline {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin-bottom: 8px;
   }
   .home-about > div .subheading {
     font-size: 18px;
@@ -479,8 +503,14 @@
   .home-about > div .data dl dt strong {
     font-size: 24px;
   }
+  .home-about > div .data dl dt span {
+    font-size: 20px;
+  }
   .home-about > div .data dl dd {
     font-size: 14px;
+  }
+  .home-about > div .data dl dt strong.special {
+    text-shadow: #abe5c6 1px 4px 3px;
   }
   .home-about > div .view-details {
     width: 120px;

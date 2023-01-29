@@ -343,7 +343,7 @@
 
 .home-about {
     background: #f9f9fb url(../images/home-about-bg.jpg) no-repeat center;
-    background-size:cover;
+    background-size: cover;
     height: 908px;
     & > div {
         height: 100%;
@@ -388,11 +388,17 @@
                         font-weight: bold;
                         &.special {
                             color: #06974b;
+                            text-shadow: #2cc976 2px 12px 13px;
                         }
+                    }
+                    span {
+                        font-size: 34px;
                     }
                 }
                 dd {
+                    margin-top: 2px;
                     font-size: 20px;
+                    line-height: 1.4;
                     font-family: MN;
                 }
             }
@@ -408,14 +414,29 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 10px 30px 0px rgba(5, 149, 74, 0.5);
-            transition: all .5s ease;
+            transition: all 0.5s ease;
             &:hover {
                 transform: translateY(-5px);
             }
         }
     }
 }
-@media (max-width: 1366px){
+@media (max-width: 1740px) {
+    .home-about > div .data {
+        width: 60%;
+    }
+}
+@media (max-width: 1560px) {
+    .home-about > div .data {
+        width: 70%;
+    }
+}
+@media (max-width: 1440px) {
+    .home-about > div .data {
+        width: 75%;
+    }
+}
+@media (max-width: 1366px) {
     .home-about {
         height: 708px;
     }
@@ -438,6 +459,9 @@
     .home-about > div .data dl dt strong {
         font-size: 46px;
     }
+    .home-about > div .data dl dt span {
+        font-size: 28px;
+    }
     .home-about > div .data dl dd {
         font-size: 18px;
     }
@@ -446,25 +470,26 @@
         height: 42px;
     }
 }
-@media (max-width: 1300px){}
-@media (max-width: 1199px){
+@media (max-width: 1300px) {
+}
+@media (max-width: 1199px) {
     .home-about > div .data {
-        width: 90%;
+        width: 95%;
         margin: 40px 0;
     }
     .home-about > div .text {
         width: 100%;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .home-about {
         height: 600px;
         background: #f9f9fb url(../images/home-about-bg.jpg) no-repeat right -265px top 0;
         background-size: cover;
     }
     .home-about > div .headline {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 22px;
+        margin-bottom: 8px;
     }
     .home-about > div .subheading {
         font-size: 18px;
@@ -488,8 +513,14 @@
     .home-about > div .data dl dt strong {
         font-size: 24px;
     }
+    .home-about > div .data dl dt span {
+        font-size: 20px;
+    }
     .home-about > div .data dl dd {
         font-size: 14px;
+    }
+    .home-about > div .data dl dt strong.special {
+        text-shadow: #abe5c6 1px 4px 3px;
     }
     .home-about > div .view-details {
         width: 120px;
