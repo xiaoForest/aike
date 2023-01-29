@@ -68,6 +68,29 @@ jQuery(document).ready(function ($) {
                 disableOnInteraction: true,
             },
         });
+        var indexSwiper3 = new Swiper('.index-s3 .swiper-container', {
+            speed: 800,
+            // centeredSlides: true,
+            mousewheel: true,
+            slidesPerView: 2.5,
+            spaceBetween: 30,
+            parallax: true,
+            loop: false,
+            simulateTouch: true,
+            navigation: {
+                prevEl: $('.index-s3 .button-prev'),
+                nextEl: $('.index-s3 .button-next'),
+            },
+            pagination: {
+                el: '.index-s3 .swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 6000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+        });
     }
     $('.home-banner').length && indexInit();
 
@@ -86,6 +109,7 @@ jQuery(document).ready(function ($) {
             }
         })
     }
+
     function mHeader() {
         var $search = $('.searchTcWrap')
         if ($(window).width() < 1199) {
@@ -138,7 +162,7 @@ jQuery(document).ready(function ($) {
         $('#languageGetBack').on('click', function () {
             $('.languageWrap').removeClass('act')
         })
-        
+
         $('.navMoblie li>a').on('click', function () {
             $(this).toggleClass('active').parent().siblings().children().removeClass('active')
             $(this).next().slideToggle().parent().siblings().children().next().slideUp()
