@@ -85,11 +85,21 @@ jQuery(document).ready(function ($) {
                 el: '.index-s3 .swiper-pagination',
                 clickable: true,
             },
-            autoplay: {
-                delay: 6000,
-                stopOnLastSlide: false,
-                disableOnInteraction: true,
+            breakpoints: {
+                990: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
             },
+            // autoplay: {
+            //     delay: 6000,
+            //     stopOnLastSlide: false,
+            //     disableOnInteraction: true,
+            // },
         });
     }
     $('.home-banner').length && indexInit();
