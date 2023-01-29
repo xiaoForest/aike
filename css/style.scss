@@ -891,7 +891,7 @@
 
 @media (max-width: 768px) {
     .home-product .product-ul .item .box {
-        width: 90vw;
+        width: calc(100% - 40px);
     }
     .home-product .product-ul .item .box,
     .home-product .product-ul .item .box .info-wrap,
