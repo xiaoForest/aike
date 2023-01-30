@@ -101,8 +101,6 @@ jQuery(document).ready(function ($) {
     mHeader()
 
     function indexInit() {
-
-        // section1
         var indexSwiper1 = new Swiper('.index-s1 .swiper-container', {
             speed: 800,
             parallax: true,
@@ -183,4 +181,48 @@ jQuery(document).ready(function ($) {
     }
     $('.home-banner').length && indexInit();
 
+    function aboutIndex() {
+        var aboutSwiper3 = new Swiper('.about-s1 .swiper-container', {
+            speed: 800,
+            // centeredSlides: true,
+            mousewheel: true,
+            slidesPerView: 4,
+            spaceBetween: 30,
+            parallax: true,
+            loop: false,
+            simulateTouch: true,
+            navigation: {
+                prevEl: $('.about-s1 .button-prev'),
+                nextEl: $('.about-s1 .button-next'),
+            },
+            // pagination: {
+            //     el: '.index-s3 .swiper-pagination',
+            //     clickable: true,
+            // },
+            scrollbar: {
+                el: '.about-s1 .swiper-scrollbar',
+                draggable: true,
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                990: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+            },
+            // autoplay: {
+            //     delay: 6000,
+            //     stopOnLastSlide: false,
+            //     disableOnInteraction: true,
+            // },
+        });
+    }
+    $('.about-certification').length && aboutIndex();
 })
