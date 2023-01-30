@@ -645,12 +645,132 @@
         height: auto;
         margin-top: 10px;
         padding: 0 10px;
-     }
+    }
     .about-culture .wrapper .list .item .text p {
         font-size: 12px;
         line-height: 1.8;
     }
     .about-culture .wrapper .list .item .text {
         width: auto;
+    }
+}
+
+.about-certification {
+    padding: 130px 0 110px;
+    .actop {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .boxes {
+            h4 {
+                margin-bottom: 16px;
+                font-family: MM;
+                font-weight: normal;
+                font-size: 46px;
+                line-height: 1;
+                color: #353535;
+            }
+            .text {
+                font-family: ML;
+                font-size: 24px;
+                line-height: 1;
+                color: #16191d;
+                opacity: 0.5;
+            }
+            .navigation {
+                display: flex;
+                align-items: center;
+                .button {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    border: 2px #259f3d solid;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 12px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    .icon-svg {
+                        fill: #259f3d;
+                        width: 40px;
+                        height: 40px;
+                    }
+                    &:hover {
+                        background: #259f3d;
+                        box-shadow: 0 10px 30px 0px rgb(5 149 74 / 10%);
+                        .icon-svg {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1560px) {
+    .about-certification {
+        padding: 120px 0 100px;
+    }
+    .about-certification .actop .boxes h4 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    .about-certification .actop .boxes .text {
+        font-size: 22px;
+    }
+}
+@media (max-width: 1440px) {
+    .about-certification {
+        padding: 110px 0 90px;
+    }
+    .about-certification .actop .boxes h4 {
+        font-size: 34px;
+    }
+    .about-certification .actop .boxes .text {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1366px) {
+    .about-certification .actop .boxes .navigation .button {
+        width: 46px;
+        height: 46px;
+    }
+}
+@media (max-width: 1199px) {
+    .about-certification .actop .boxes .navigation .button {
+        width: 42px;
+        height: 42px;
+    }
+    .about-certification {
+        padding: 90px 0 70px;
+    }
+    .about-certification .actop .boxes h4 {
+        font-size: 32px;
+    }
+    .about-certification .actop .boxes .text {
+        font-size: 18px;
+    }
+}
+@media (max-width: 990px) {
+    .about-certification {
+        padding: 70px 0 50px;
+    }
+}
+@media (max-width: 768px) {
+    .about-certification .actop .boxes .navigation .button {
+        width: 32px;
+        height: 32px;
+    }
+    .about-certification {
+        padding: 60px 0 40px;
+    }
+    .about-certification .actop .boxes h4 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    .about-certification .actop .boxes .text {
+        font-size: 16px;
     }
 }
