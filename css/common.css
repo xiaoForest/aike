@@ -264,7 +264,7 @@
 }
 .header.changeHeader {
   background: #fff;
-  height: 90px;
+  height: 100px;
   box-shadow: rgb(242, 242, 242) 0px 2px 2px 0px;
 }
 .header.changeHeader .control .social .annulus .item {
