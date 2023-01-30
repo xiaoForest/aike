@@ -146,4 +146,77 @@
   .second-nav .main-content .boxes .nav-ul li:after {
     height: 2px;
   }
+}
+.pageBannerWrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 13;
+}
+.pageBannerWrap .pageBannerBg {
+  max-width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+  transition: all 0.5s ease;
+}
+.pageBannerWrap .pageBannerBg.change {
+  height: calc(100vh - 150px);
+}
+.pageBannerWrap .pageBannerBg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: o-scale 20s linear infinite;
+          animation: o-scale 20s linear infinite;
+}
+.pageBannerWrap .pageBannerInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.pageBannerWrap .pageBannerInfo .info {
+  display: block;
+  color: #fff;
+  font: 22px/1.2 MR;
+}
+.pageBannerWrap .pageBannerInfo .title {
+  margin-bottom: 5px;
+  font: bold 48px/1.4 ML;
+  color: #fff;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 1366px) {
+  .pageBannerWrap .pageBannerInfo .title {
+    font-size: 38px;
+  }
+  .pageBannerWrap .pageBannerInfo .info {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1199px) {
+  .pageBannerWrap .pageBannerBg {
+    height: 60vh;
+  }
+  .pageBannerWrap .pageBannerInfo .title {
+    font-size: 32px;
+  }
+  .pageBannerWrap .pageBannerInfo .info {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .pageBannerWrap .pageBannerBg {
+    height: 40vh;
+  }
+  .pageBannerWrap .pageBannerInfo .title {
+    font-size: 24px;
+  }
+  .pageBannerWrap .pageBannerInfo .info {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
