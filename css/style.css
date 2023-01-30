@@ -74,7 +74,7 @@
 .second-nav .main-content .boxes .nav-ul li a:hover {
   color: #1caf62;
 }
-.second-nav .main-content .boxes .nav-ul li:after {
+.second-nav .main-content .boxes .nav-ul li a:after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -85,11 +85,11 @@
   opacity: 0;
   transition: all 0.3s ease;
 }
-.second-nav .main-content .boxes .nav-ul li.on:after {
-  opacity: 1;
-}
-.second-nav .main-content .boxes .nav-ul li.on a {
+.second-nav .main-content .boxes .nav-ul li.on .active {
   color: #1caf62;
+}
+.second-nav .main-content .boxes .nav-ul li.on .active:after {
+  opacity: 1;
 }
 
 @media (max-width: 1366px) {
@@ -145,6 +145,9 @@
   }
   .second-nav .main-content .boxes .nav-ul li:after {
     height: 2px;
+  }
+  .second-nav .main-content .boxes .nav-ul li a:hover {
+    color: #333;
   }
 }
 .pageBannerWrap {

@@ -1,6 +1,34 @@
 jQuery(document).ready(function ($) {
     let mlNav = $('.magnetic-levitation');
     let h = 100
+
+    function navMain() {
+        var r = 0,
+            n = $(".header-light").length ? "light" : "dark";
+        $(window).on("scroll", function () {
+            var t = $(this).scrollTop(),
+                u = $(".header-fixed").length,
+                i;
+            // mlNav.length && window.innerWidth > 991 && (i = [],
+            mlNav.length && window.innerWidth && (i = [],
+                $(".magnetic-levitation a").each(function () {
+                    var n = $(this).attr("href");
+                    $(n).length && i.push({
+                        href: n,
+                        scroll: $(n).offset().top - 300
+                    })
+                }),
+                $("body.is-scrolling").length == 0 && $.each(i, function (n, t) {
+                    window.scrollY > t.scroll && ($(".magnetic-levitation a.active").removeClass("active"),
+                        $('.magnetic-levitation a[href="' + t.href + '"]').addClass("active"))
+                }));
+            r = t
+        });
+        $(".cd-search-trigger").on("click", function () {
+            return false
+        })
+    }
+
     function scrollTo() {
         $(document).on("click", 'a[href^="#"][href!="#"]', function (n) {
 
@@ -25,8 +53,9 @@ jQuery(document).ready(function ($) {
             }, 800))
 
     }
-    scrollTo()
-    
+    $('.magnetic-levitation').length && navMain()
+    $('.magnetic-levitation').length && scrollTo()
+
     var PC = $(window).width() > 1024,
         mobile = $(window).width() <= 768,
         winWidth = $(window).width(),
