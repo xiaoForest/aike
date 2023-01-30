@@ -1,17 +1,32 @@
-window._bd_share_config = {
-    "common": {
-        "bdSnsKey": {},
-        "bdText": "",
-        "bdMini": "2",
-        "bdPic": "",
-        "bdStyle": "0",
-        "bdSize": "16"
-    },
-    "share": {}
-};
-with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
-
 jQuery(document).ready(function ($) {
+    let mlNav = $('.magnetic-levitation');
+    let h = 100
+    function scrollTo() {
+        $(document).on("click", 'a[href^="#"][href!="#"]', function (n) {
+
+            var i = $($(this).attr("href")),
+                t = i.offset().top - h;
+            $("body").addClass("is-scrolling");
+            mlNav.length && (t -= $(".fixed-bar").height(),
+                $('a[href^="#"]').removeClass("active"),
+                $(this).addClass("active"));
+
+            $("html, body").stop().animate({
+                scrollTop: t
+            }, 500, function () {
+                $("body").removeClass("is-scrolling")
+            });
+
+            n.preventDefault()
+        });
+        location.hash && ($el = $(location.hash),
+            $el.length && $("html, body").stop().animate({
+                scrollTop: $el.offset().top - h
+            }, 800))
+
+    }
+    scrollTo()
+    
     var PC = $(window).width() > 1024,
         mobile = $(window).width() <= 768,
         winWidth = $(window).width(),
