@@ -147,6 +147,9 @@
 @media (max-width: 990px) {
 }
 @media (max-width: 768px) {
+    .second-nav.hind {
+        display: none;
+    }
     .second-nav .main-content {
         height: 50px;
     }
@@ -1291,8 +1294,7 @@
             height: 100%;
             text-align: center;
             background-attachment: fixed;
-
-            background-size: cover;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
         }
         .chiefly {
@@ -1394,9 +1396,11 @@
                                     color: #fff;
                                     font-family: MR;
                                     font-size: 22px;
+                                    line-height: 1.2;
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
+                                    text-align: center;
                                     cursor: pointer;
                                     transition: all 0.5s ease;
                                     overflow: hidden;
@@ -1477,5 +1481,153 @@
                 }
             }
         }
+    }
+}
+@media (max-width: 1560px) {
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes {
+        width: calc(50% - 40px);
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce {
+        padding: 0 45px;
+        height: 50vh;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .name {
+        font-size: 28px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text p {
+        font-size: 16px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .tit {
+        font-size: 46px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button {
+        font-size: 18px;
+        height: 72px;
+    }
+}
+@media (max-width: 1440px) {
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes {
+        width: calc(50% - 30px);
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce {
+        padding: 0 40px;
+        height: 45vh;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .name {
+        font-size: 26px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text p {
+        font-size: 14px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text {
+        margin-top: 12px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .tit {
+        font-size: 44px;
+        margin-top: 12px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button {
+        font-size: 16px;
+        height: 62px;
+    }
+}
+@media (max-width: 1366px) {
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes {
+        width: calc(50% - 20px);
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce {
+        padding: 0 36px;
+        height: 40vh;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .name {
+        font-size: 24px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text {
+        margin-top: 10px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .tit {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button {
+        font-size: 14px;
+        height: 52px;
+    }
+}
+@media (max-width: 1199px) {
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes {
+        width: calc(50% - 10px);
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce {
+        padding: 0 32px;
+        height: 46vh;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .name {
+        font-size: 22px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text {
+        margin-top: 8px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .tit {
+        font-size: 34px;
+        margin-top: 8px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button {
+        font-size: 14px;
+        height: 46px;
+    }
+}
+@media (max-width: 990px) {
+    .emc-main .emc-banner .bg {
+        background-attachment: inherit;
+        background-size: cover;
+        background-position: left -832px top 0;
+    }
+    .emc-main .emc-banner:nth-child(1) .bg  {
+        background-position: left -500px top 0;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes {
+        width: 100%;
+    }
+    .emc-main .emc-banner:nth-child(2n + 2) .chiefly .wrapper .showing {
+        flex-direction: column-reverse;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes.photo {
+        width: 50%;
+        height: 30vh;
+        display: flex;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce {
+        height: 40vh;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes.photo {
+        width: 60%;
+        height: auto;
+        display: flex;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce {
+        height: 50vh;
+        margin-top: 30px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .name {
+        font-size: 16px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text {
+        margin-top: 5px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .tit {
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button {
+        font-size: 14px;
+        height: 48px;
     }
 }
