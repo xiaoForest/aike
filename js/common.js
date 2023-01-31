@@ -290,15 +290,15 @@ jQuery(document).ready(function ($) {
             h = ($(document).scrollTop() + $(window).height() / 2 + 20) - dh;
             $(".m2lcLine i").css("height", h);
             //$("title").text(dh);
-            $(".m2lcItems li").each(function (i) {
-                if ($(document).scrollTop() + ($(window).height() / 1.9) >= $(".m2lcItems li").eq(i).offset().top) {
-                    $(".m2lcYr").removeClass("on");
-                    $(".m2lcYr").eq(i).addClass("on");
-                    $(".m2lcItems li").eq(i).addClass("on");
-                } else {
-                    $(".m2lcItems li").eq(i).removeClass("on");
-                }
-            });
+            // $(".m2lcItems li").each(function (i) {
+            //     if ($(document).scrollTop() + ($(window).height() / 1.9) >= $(".m2lcItems li").eq(i).offset().top) {
+            //         $(".m2lcYr").removeClass("on");
+            //         $(".m2lcYr").eq(i).addClass("on");
+            //         $(".m2lcItems li").eq(i).addClass("on");
+            //     } else {
+            //         $(".m2lcItems li").eq(i).removeClass("on");
+            //     }
+            // });
             $(".maoLink").each(function (i) {
                 if ($(document).scrollTop() + 500 >= $(".maoLink").eq(i).offset().top) {
                     $(".slideMenu_a").removeClass("on");
