@@ -309,5 +309,12 @@ jQuery(document).ready(function ($) {
 
     }
 
+    if ($('.emc-banner').length) {
+        $('.emc-banner .btns .button').on('click', function (e) {
+            if ($(this).hasClass('on')) return false
+            $(this).addClass('on').siblings().removeClass('on')
+            $(this).parents('.emc-banner').toggleClass('on')
+        })
+    }
 
 })

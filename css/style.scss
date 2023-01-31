@@ -1279,3 +1279,203 @@
         font-size: 12px;
     }
 }
+
+.emc-main {
+    overflow: hidden;
+    .emc-banner {
+        position: relative;
+        height: 100vh;
+        .bg {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-attachment: fixed;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .chiefly {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .wrapper {
+                .showing {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .boxes {
+                        width: calc(50% - 50px);
+                        overflow: hidden;
+                        .pic {
+                            position: relative;
+                            & > div {
+                                height: 100%;
+                                transition: all 0.5s ease;
+                                overflow: hidden;
+                            }
+                            .pic1 {
+                                opacity: 1;
+                            }
+                            .pic2 {
+                                position: absolute;
+                                top: 0;
+                                opacity: 0;
+                            }
+                            & > div {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: scale-down;
+                                }
+                            }
+                        }
+                        .info {
+                            .introduce {
+                                height: 55vh;
+                                background: rgba(28, 175, 98, 0.8);
+                                overflow: hidden;
+                                padding: 0 55px;
+                                & > div {
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    transition: all 0.5s ease-in-out;
+                                }
+                                .introduce1 {
+                                    opacity: 1;
+                                }
+                                .introduce2 {
+                                    opacity: 0;
+                                }
+                                .name {
+                                    display: block;
+                                    font-family: MR;
+                                    line-height: 1.2;
+                                    color: #fff;
+                                    font-size: 30px;
+                                }
+                                .tit {
+                                    margin-top: 14px;
+                                    line-height: 1.2;
+                                    letter-spacing: 5px;
+                                    color: #fff;
+                                    font-size: 48px;
+                                }
+                                .text {
+                                    margin-top: 14px;
+                                    p {
+                                        font-family: MR;
+                                        line-height: 1.8;
+                                        color: #fff;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                            .btns {
+                                margin-top: 12px;
+                                display: flex;
+                                .button {
+                                    position: relative;
+                                    border: 2px #fff solid;
+                                    width: 100%;
+                                    height: 82px;
+                                    color: #fff;
+                                    font-family: MR;
+                                    font-size: 22px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    transition: all 0.5s ease;
+                                    overflow: hidden;
+                                    &:first-child {
+                                        margin-right: 12px;
+                                    }
+                                    &.on {
+                                        background: #1caf62;
+                                        border-color: #1caf62;
+                                        color: #fff !important;
+                                    }
+                                    &:after {
+                                        content: "";
+                                        position: absolute;
+                                        z-index: -1;
+                                        -webkit-transition: all 0.3s;
+                                        -moz-transition: all 0.3s;
+                                        transition: all 0.3s;
+                                        width: 100%;
+                                        height: 0;
+                                        top: 50%;
+                                        left: 50%;
+                                        background: #fff;
+                                        opacity: 0;
+                                        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                                        -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                                        -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                                        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                                    }
+                                    &:hover,
+                                    &:after {
+                                        color: #1caf62;
+                                    }
+                                    &:hover:after {
+                                        height: 260%;
+                                        opacity: 1;
+                                    }
+
+                                    &:active:after {
+                                        height: 400%;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.on {
+            .chiefly {
+                .wrapper {
+                    .showing {
+                        .boxes {
+                            .pic {
+                                .pic1 {
+                                    position: absolute;
+                                    opacity: 0;
+                                }
+                                .pic2 {
+                                    position: relative;
+                                    opacity: 1;
+                                }
+                            }
+                            .info {
+                                .introduce {
+                                    .introduce1 {
+                                        height: 0;
+                                        opacity: 0;
+                                    }
+                                    .introduce2 {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

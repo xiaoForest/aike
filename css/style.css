@@ -1220,4 +1220,176 @@
     height: 32px;
     font-size: 12px;
   }
+}
+.emc-main {
+  overflow: hidden;
+}
+.emc-main .emc-banner {
+  position: relative;
+  height: 100vh;
+}
+.emc-main .emc-banner .bg {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.emc-main .emc-banner .chiefly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes {
+  width: calc(50% - 50px);
+  overflow: hidden;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .pic {
+  position: relative;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .pic > div {
+  height: 100%;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .pic .pic1 {
+  opacity: 1;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .pic .pic2 {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .pic > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .pic > div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce {
+  height: 55vh;
+  background: rgba(28, 175, 98, 0.8);
+  overflow: hidden;
+  padding: 0 55px;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .introduce1 {
+  opacity: 1;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .introduce2 {
+  opacity: 0;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .name {
+  display: block;
+  font-family: MR;
+  line-height: 1.2;
+  color: #fff;
+  font-size: 30px;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .tit {
+  margin-top: 14px;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  color: #fff;
+  font-size: 48px;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text {
+  margin-top: 14px;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .introduce .text p {
+  font-family: MR;
+  line-height: 1.8;
+  color: #fff;
+  font-size: 18px;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns {
+  margin-top: 12px;
+  display: flex;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button {
+  position: relative;
+  border: 2px #fff solid;
+  width: 100%;
+  height: 82px;
+  color: #fff;
+  font-family: MR;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button:first-child {
+  margin-right: 12px;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button.on {
+  background: #1caf62;
+  border-color: #1caf62;
+  color: #fff !important;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button:hover, .emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button:after {
+  color: #1caf62;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button:hover:after {
+  height: 260%;
+  opacity: 1;
+}
+.emc-main .emc-banner .chiefly .wrapper .showing .boxes .info .btns .button:active:after {
+  height: 400%;
+  opacity: 1;
+}
+.emc-main .emc-banner.on .chiefly .wrapper .showing .boxes .pic .pic1 {
+  position: absolute;
+  opacity: 0;
+}
+.emc-main .emc-banner.on .chiefly .wrapper .showing .boxes .pic .pic2 {
+  position: relative;
+  opacity: 1;
+}
+.emc-main .emc-banner.on .chiefly .wrapper .showing .boxes .info .introduce .introduce1 {
+  height: 0;
+  opacity: 0;
+}
+.emc-main .emc-banner.on .chiefly .wrapper .showing .boxes .info .introduce .introduce2 {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
