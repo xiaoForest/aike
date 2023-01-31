@@ -1141,8 +1141,10 @@ $green: #0d9f53;
     display: none;
 }
 .footer {
+    position: relative;
     font-size: 0;
     background-color: #000000;
+    z-index: 20;
     .footer-box {
         height: 564px;
         margin: 0 auto;

@@ -1057,8 +1057,10 @@
 }
 
 .footer {
+  position: relative;
   font-size: 0;
   background-color: #000000;
+  z-index: 20;
 }
 .footer .footer-box {
   height: 564px;

@@ -925,6 +925,9 @@
 .product-elevator .wrapper .elevator .boxes .headline {
   display: flex;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
 }
 .product-elevator .wrapper .elevator .boxes .headline.on .icon {
   background: url(../images/icon-product-active.png) no-repeat center;
@@ -951,13 +954,11 @@
   font-weight: normal;
   font-size: 22px;
   line-height: 1.2;
-  transition: all 0.3s ease;
 }
 .product-elevator .wrapper .elevator .boxes .headline .text span {
   font-family: DM;
   font-size: 14px;
   line-height: 1.2;
-  transition: all 0.3s ease;
 }
 .product-elevator .wrapper .elevator .boxes .product-list {
   margin-bottom: 140px;

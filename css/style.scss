@@ -974,6 +974,8 @@
                 .headline {
                     display: flex;
                     align-items: center;
+                    position: sticky;
+                    top: 120px;
                     &.on {
                         .icon {
                             background: url(../images/icon-product-active.png) no-repeat center;
@@ -1002,13 +1004,11 @@
                             font-weight: normal;
                             font-size: 22px;
                             line-height: 1.2;
-                            transition: all 0.3s ease;
                         }
                         span {
                             font-family: DM;
                             font-size: 14px;
                             line-height: 1.2;
-                            transition: all 0.3s ease;
                         }
                     }
                 }
