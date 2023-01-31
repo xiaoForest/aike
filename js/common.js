@@ -270,21 +270,20 @@ jQuery(document).ready(function ($) {
     }
     $('.about-certification').length && aboutIndex();
 
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > ($('.m2lcWpr').offset().top - $(window).height() / 3)) {
-            $(".slideMenu").fadeIn(200);
-        } else {
-            $(".slideMenu").fadeOut(200);
-        }
-        // if ($(document).scrollTop() > ($('.hmCon7').offset().top - $(window).height() / 1.2)) {
-        //     $(".slideMenu").css("opacity", 0);
-        // } else {
-        //     $(".slideMenu").css("opacity", 1);
-        // }
-    })
 
-    if ($('.m2lcLine').length) {
+    if ($('.m2lcWpr').length) {
         $(window).scroll(function () {
+            if ($(document).scrollTop() > ($('.m2lcWpr').offset().top - $(window).height() / 3)) {
+                $(".slideMenu").fadeIn(200);
+            } else {
+                $(".slideMenu").fadeOut(200);
+            }
+            // if ($(document).scrollTop() > ($('.hmCon7').offset().top - $(window).height() / 1.2)) {
+            //     $(".slideMenu").css("opacity", 0);
+            // } else {
+            //     $(".slideMenu").css("opacity", 1);
+            // }
+
             var h = 0;
             var dh = $(".m2lcLine").offset().top;
             h = ($(document).scrollTop() + $(window).height() / 2 + 20) - dh;
