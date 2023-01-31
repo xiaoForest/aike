@@ -952,3 +952,180 @@
         height: 4px;
     }
 }
+
+.product-elevator {
+    padding-top: 135px;
+    background: #f8f8f8;
+    overflow: hidden;
+    .wrapper {
+        position: relative;
+        .elevator {
+            display: flex;
+            .boxes {
+                &:nth-child(1) {
+                    width: 23%;
+                }
+                &:nth-child(2) {
+                    width: 100%;
+                }
+                .headline {
+                    display: flex;
+                    align-items: center;
+                    &.on {
+                        .icon {
+                            background: url(../images/icon-product-active.png) no-repeat center;
+                        }
+                        .text {
+                            h4 {
+                                color: #1caf62;
+                            }
+                            span {
+                                color: #1caf62;
+                            }
+                        }
+                    }
+                    .icon {
+                        display: block;
+                        background: url(../images/icon-product.png) no-repeat center;
+                        background-size: 49px;
+                        width: 49px;
+                        height: 39px;
+                    }
+                    .text {
+                        margin-left: 30px;
+                        h4 {
+                            font-family: MR;
+                            font-weight: normal;
+                            font-size: 22px;
+                            line-height: 1.2;
+                            transition: all 0.3s ease;
+                        }
+                        span {
+                            font-family: DM;
+                            font-size: 14px;
+                            line-height: 1.2;
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+                .product-list {
+                    margin-right: -15px;
+                    margin-bottom: 140px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        width: 33.33%;
+                        .items {
+                            position: relative;
+                            margin: 0 15px 30px;
+                            padding: 40px;
+                            background: #fff;
+                            box-shadow: rgb(242 242 242) 6px 8px 8px 2px;
+                            transition: all 0.5s ease;
+                            .bg {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: url(../images/product/product-item-bg.jpg) no-repeat center center;
+                                background-size: cover;
+                                z-index: 2;
+                                transition: all 0.5s ease;
+                                opacity: 0;
+                            }
+                            .flexImg {
+                                position: relative;
+                                z-index: 3;
+                                & > img {
+                                    width: 100%;
+                                    opacity: 0;
+                                }
+                                .pic {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
+                            }
+
+                            .tit {
+                                position: relative;
+                                z-index: 3;
+                                margin-top: 20px;
+                                font-family: MD;
+                                line-height: 1.2;
+                                font-size: 22px;
+                                color: #000;
+                            }
+                            .text {
+                                position: relative;
+                                z-index: 3;
+                                margin-top: 10px;
+                                p {
+                                    font-family: MN;
+                                    color: #555;
+                                    font-size: 16px;
+                                    line-height: 2;
+                                }
+                            }
+                            .more {
+                                position: relative;
+                                z-index: 3;
+                                margin-top: 16px;
+                                width: 114px;
+                                height: 40px;
+                                color: #fff;
+                                font-family: MR;
+                                font-size: 15px;
+                                background: #1caf62;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            &:hover {
+                                transform: translateY(-5px);
+                                .bg {
+                                    opacity: 1;
+                                }
+                                .tit {
+                                    color: #fff;
+                                }
+                                .text {
+                                    p {
+                                        color: #fff;
+                                    }
+                                }
+                                .more {
+                                    color: #1caf62;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .m2lcLine {
+            position: absolute;
+            top: 0;
+            left: 62px;
+            height: 100%;
+            border-left: 1px #dfdfdf dashed;
+            i {
+                display: block;
+                position: absolute;
+                border-left: 1px #1caf62 dashed;
+            }
+        }
+    }
+}

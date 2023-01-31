@@ -269,4 +269,46 @@ jQuery(document).ready(function ($) {
         });
     }
     $('.about-certification').length && aboutIndex();
+
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > ($('.m2lcWpr').offset().top - $(window).height() / 3)) {
+            $(".slideMenu").fadeIn(200);
+        } else {
+            $(".slideMenu").fadeOut(200);
+        }
+        // if ($(document).scrollTop() > ($('.hmCon7').offset().top - $(window).height() / 1.2)) {
+        //     $(".slideMenu").css("opacity", 0);
+        // } else {
+        //     $(".slideMenu").css("opacity", 1);
+        // }
+    })
+
+    if ($('.m2lcLine').length) {
+        $(window).scroll(function () {
+            var h = 0;
+            var dh = $(".m2lcLine").offset().top;
+            h = ($(document).scrollTop() + $(window).height() / 2 + 20) - dh;
+            $(".m2lcLine i").css("height", h);
+            //$("title").text(dh);
+            $(".m2lcItems li").each(function (i) {
+                if ($(document).scrollTop() + ($(window).height() / 1.9) >= $(".m2lcItems li").eq(i).offset().top) {
+                    $(".m2lcYr").removeClass("on");
+                    $(".m2lcYr").eq(i).addClass("on");
+                    $(".m2lcItems li").eq(i).addClass("on");
+                } else {
+                    $(".m2lcItems li").eq(i).removeClass("on");
+                }
+            });
+            $(".maoLink").each(function (i) {
+                if ($(document).scrollTop() + 500 >= $(".maoLink").eq(i).offset().top) {
+                    $(".slideMenu_a").removeClass("on");
+                    $(".slideMenu_a").eq(i).addClass("on");
+                }
+            });
+        });
+
+
+    }
+
+
 })

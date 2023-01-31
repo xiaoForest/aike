@@ -30,6 +30,10 @@
   font-family: "MM";
   src: url("../fonts/MiSans-Medium.ttf");
 }
+@font-face {
+  font-family: "MD";
+  src: url("../fonts/MiSans-Demibold.ttf");
+}
 @-webkit-keyframes o-upfade-top {
   0% {
     opacity: 0;
