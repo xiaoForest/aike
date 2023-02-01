@@ -351,13 +351,14 @@ jQuery(document).ready(function ($) {
     }
 
     $(function () {
+        if ($('.wrapper-dropdown').length) {
+            let wrapperDropdown = new DropDown($('.wrapper-dropdown'));
 
-        let wrapperDropdown = new DropDown($('.wrapper-dropdown'));
-
-        $(document).click(function () {
-            // all dropdowns
-            $('.wrapper-dropdown-3').removeClass('active');
-        });
+            $(document).click(function () {
+                // all dropdowns
+                $('.wrapper-dropdown-3').removeClass('active');
+            });
+        }
 
     });
     if ($('.data-main').length) {

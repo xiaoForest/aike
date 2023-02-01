@@ -1682,6 +1682,7 @@
                             span {
                                 padding: 0 26px;
                                 color: #444;
+                                font-size: 20px;
                                 font-weight: bold;
                             }
                         }
@@ -1815,7 +1816,9 @@
                             align-items: center;
                             justify-content: space-between;
                             .icon {
-                                display: block;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
                                 img {
                                     object-fit: contain;
                                 }
@@ -1828,7 +1831,7 @@
                                 opacity: 0.4;
                             }
                             .tit {
-                                font-size: MN;
+                                font-family: MN;
                                 font-size: 20px;
                                 font-weight: normal;
                                 color: #fff;
@@ -1902,6 +1905,7 @@
                                 display: block;
                                 transition: all 0.3s ease;
                                 font-family: MR;
+                                line-height: 1.4;
                                 font-size: 20px;
                                 color: #555;
                             }
@@ -1912,15 +1916,161 @@
         }
     }
 }
+@media (max-width: 1779px) {
+    .data-main {
+        padding: 120px 0;
+    }
+    .data-main .wrapper .data-top .boxes:nth-child(2) {
+        width: 44%;
+    }
+}
 @media (max-width: 1560px) {
+    .data-main {
+        padding: 90px 0;
+    }
+    .data-main .wrapper .data-top .boxes:nth-child(2) {
+        width: 54%;
+    }
+    .data-main .wrapper .data-top .boxes .truck {
+        height: 66px;
+    }
+    .data-main .wrapper .data-list {
+        margin-top: 30px;
+    }
+    .data-main .wrapper .data-list .li .row {
+        height: 90px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .triangle {
+        border-width: 10px 8px 0 8px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li .item .text,
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .tit {
+        font-size: 18px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .icon {
+        height: 70px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li {
+        height: 88px;
+    }
 }
 @media (max-width: 1440px) {
+    .data-main {
+        padding: 70px 0;
+    }
+    .data-main .wrapper .data-top .boxes:nth-child(2) {
+        width: 70%;
+    }
 }
 @media (max-width: 1366px) {
 }
 @media (max-width: 1199px) {
+    .data-main {
+        padding: 60px 0;
+    }
+    .data-main .wrapper .data-list {
+        margin-top: 20px;
+    }
+    .data-main .wrapper .data-top .boxes:nth-child(2) {
+        width: 90%;
+    }
+    .data-main .wrapper .data-top .boxes .truck .wrapper-dropdown-3 p span,
+    .data-main .wrapper .data-top .boxes .truck input {
+        font-size: 16px;
+    }
+    .data-main .wrapper .data-list .li .row {
+        height: 80px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine {
+        padding: 0 40px 0 28px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .line {
+        margin: 0 38px 0 30px;
+        height: 40px;
+    }
+    .data-main .wrapper .data-list .li .data-ul {
+        padding: 10px 38px 10px 30px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li {
+        height: 78px;
+    }
 }
 @media (max-width: 990px) {
+    .data-main {
+        padding: 50px 0;
+    }
+    .data-main .wrapper .data-top .boxes:nth-child(2) {
+        width: 100%;
+    }
+    .data-main .wrapper .data-top .boxes .truck .wrapper-dropdown-3 p span,
+    .data-main .wrapper .data-top .boxes .truck input {
+        font-size: 14px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li .item .text,
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .tit {
+        font-size: 16px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .line {
+       height: 38px;
+    }
 }
 @media (max-width: 768px) {
+    .data-main {
+        padding: 40px 0;
+    } 
+    .data-main .wrapper .data-top {
+        flex-direction: column;
+    }
+    .data-main .wrapper .data-top .boxes:nth-child(2) {
+        margin: 10px 0;
+    }
+    .data-main .wrapper .data-top .boxes .truck {
+        height: 50px;
+        padding: 0 20px;
+        border-width: 1px;
+    }
+    .data-main .wrapper .data-list {
+        margin-top: 10px;
+    }
+
+    .data-main .wrapper .data-list .li {
+        margin-bottom: 10px;
+    }
+    .data-main .wrapper .data-list .li .data-ul {
+        padding: 10px 28px 10px 20px;
+    }
+    .data-main .wrapper .data-list .li .row {
+        height: 60px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine {
+        padding: 0 20px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li .item .text,
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .tit {
+        font-size: 14px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .line {
+        margin: 0 28px 0 20px;
+        height: 30px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .icon img {
+        width: 30px;
+    }
+    .data-main .wrapper .data-list .li .row .railway-engine .boxes .triangle {
+        border-width: 8px 6px 0 6px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li .item:nth-child(1) .icon-svg {
+        margin-right: 10px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li .item:nth-child(2) {
+        padding-left: 14px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li .item:nth-child(1) .icon-svg {
+        width: 22px;
+        height: 22px;
+    }
+    .data-main .wrapper .data-list .li .data-ul li .item:nth-child(3) .icon-svg {
+        width: 16px; 
+        height: 16px;
+    }
 }
