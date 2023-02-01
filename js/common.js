@@ -317,4 +317,58 @@ jQuery(document).ready(function ($) {
         })
     }
 
+    function DropDown(el) {
+        this.dd = el;
+        this.text = this.dd.children('p');
+        this.placeholder = this.text.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+    }
+    DropDown.prototype = {
+        initEvents: function () {
+            var obj = this;
+
+            obj.dd.on('click', function (event) {
+                $(this).toggleClass('active');
+                return false;
+            });
+
+            obj.opts.on('click', function () {
+                var opt = $(this);
+                obj.val = opt.text();
+                obj.index = opt.index();
+                obj.placeholder.text(obj.val);
+            });
+        },
+        getValue: function () {
+            return this.val;
+        },
+        getIndex: function () {
+            return this.index;
+        }
+    }
+
+    $(function () {
+
+        let wrapperDropdown = new DropDown($('.wrapper-dropdown'));
+
+        $(document).click(function () {
+            // all dropdowns
+            $('.wrapper-dropdown-3').removeClass('active');
+        });
+
+    });
+    if ($('.data-main').length) {
+        $('.data-list .li .row').click(function () {
+            var _par = $(this).parent();
+            if (!_par.hasClass('on')) {
+                _par.addClass('on').siblings().removeClass('on'), _par.siblings().find('.hide').slideUp(), _par.find('.hide').slideDown();
+            } else {
+                _par.removeClass('on').find('.hide').slideUp();
+            }
+        })
+    }
+
 })
