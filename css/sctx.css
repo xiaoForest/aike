@@ -1,0 +1,110 @@
+.newShopList {
+	margin-top: .2rem;
+	display: flex;
+	justify-content: center;
+}
+.newShopList .lists {
+	overflow: hidden;
+}
+
+.newShopList .lists:nth-child(1) li:nth-child(2n+2) {
+	display: none;
+}
+.newShopList .lists:nth-child(2) li:nth-child(2n+1) {
+	display: none;
+}
+.newShopList .lists li {
+	width: 3.65rem;
+	border-radius: 0.12rem;
+	background: #ffffff;
+	margin-bottom: 0.28rem;
+	padding-bottom: 0.28rem;
+	margin: 0 .1rem .2rem;
+	overflow: hidden;
+}
+.newShopList .lists li a {
+	display: block;
+}
+.newShopList .lists li a img {
+}
+
+.newShopList .lists li a .img_box {
+	overflow: hidden;
+}
+.newShopList .lists li a .img_box img {
+	width: 100%;
+	display: block;
+	border: 0;
+	height: auto;
+}
+.newShopList .lists li a .name {
+	font-size: 0.28rem;
+	color: #333333;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	line-height: 1.3;
+	margin: 0.15rem 0;
+	padding: 0 0.15rem;
+}
+.newShopList .lists li a .tag {
+	display: flex;
+	padding-left: 0.15rem;
+	margin-bottom: 0.1rem;
+}
+.newShopList .lists li a .tag span {
+	padding: 0.02rem 0.06rem 0.04rem;
+	background: #fff;
+	border: 1px solid #b3a078;
+	border-radius: 4px;
+	margin-right: 0.09rem;
+	font-size: 0.2rem;
+	color: #b3a078;
+}
+.newShopList .lists li a .tag span:last-child {
+	margin-right: 0;
+}
+.newShopList .lists li a .tag .s1 {
+	background: #b3a078;
+	border: 1px solid #b3a078;
+	color: #fff;
+}
+.newShopList .lists li a .price {
+	font-size: 0.24rem;
+	color: #a82328;
+	padding-left: 0.15rem;
+}
+.newShopList .lists li a .price strong {
+	font-size: 0.4rem;
+}
+.newShopList .lists li a .yh {
+	width: fit-content;
+	font-size: 0.2rem;
+	color: #a82328;
+	border: 1px solid #a82328;
+	border-radius: 4px;
+	margin: 0.13rem 0 0 0.15rem;
+	padding-right: 0.04rem;
+	display: flex;
+}
+.newShopList .lists li a .yh span {
+	background: #f6e9e9;
+	padding: 0.02rem 0.04rem 0.04rem;
+	border-radius: 4px 0 0 4px;
+	border-right: 1px dashed #a82328;
+	margin-right: 0.04rem;
+}
+.newShopList .lists .itempic {
+	padding: 0;
+}
+.newShopList .lists .itempic a {
+	display: block;
+}
+.newShopList .lists .itempic a img {
+	display: block;
+	width: 100%;
+}
