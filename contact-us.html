@@ -234,6 +234,53 @@
         </div>
     </section>
 
+    <div class="contact-us">
+        <div class="wrapper">
+            <div class="contact-us-subheading">
+                <h4 class="tit">联系方式</h4>
+                <div class="line"></div>
+            </div>
+            <ul class="us-list">
+                <li>
+                    <div class="icon"><img src="images/contact/icon-contact1.png" alt=""></div>
+                    <div class="tit">销售电话</div>
+                    <span class="text text1"><a href="tel:18614090597">18614090597</a></span>
+                    <span class="hint">(工作日8:30~17:30)</span>
+                    <span class="hint">以外无人接听</span>
+                    <span class="text last-Two"><a href="tel:400-0160-309">400-0160-309</a></span>
+                    <span class="text last"><a href="tel:010-82922019">010-82922019</a></span>
+                </li>
+                <li>
+                    <div class="icon"><img src="images/contact/icon-contact2.png" alt=""></div>
+                    <div class="tit">公司传真</div>
+                    <span class="text"><p>010-82922657</p></span>
+                </li>
+                <li>
+                    <div class="icon"><img src="images/contact/icon-contact3.png" alt=""></div>
+                    <div class="tit">公司地址</div>
+                    <span class="text">
+                        <p>北京市海淀区永捷北路2号</p>
+                        <p>天惠华大厦一层</p>
+                    </span>
+                </li>
+                <li>
+                    <div class="icon"><img src="images/contact/icon-contact4.png" alt=""></div>
+                    <div class="tit">业务邮箱</div>
+                    <span class="text"><a href="mailto:lvh@emcare.com.cn">lvh@emcare.com.cn</a></span>
+                </li>
+                <li>
+                    <div class="icon"><img src="images/contact/icon-contact5.png" alt=""></div>
+                    <div class="tit">爱科淘宝旗舰店</div>
+                    <div class="code"><img src="images/footer-code2.png" alt=""></div>
+                </li>
+                <li>
+                    <div class="icon"><img src="images/contact/icon-contact6.png" alt=""></div>
+                    <div class="tit">企业微信</div>
+                    <div class="code"><img src="images/footer-code1.png" alt=""></div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="map-main">
         <div class="map" id="map"></div>
@@ -515,54 +562,5 @@
 <!-- <script src="js/bundle.js"></script> -->
 <script src="js/common.js"></script>
 <script src="https://webapi.amap.com/maps?v=1.4.0&key=565fa5888e5bc9fe6c49ea033aa3dc81"></script>
-
-<script>
-    function contactInit() {
-        var _para, _img, lnglat = [],
-            x, y;
-        _para = '<p>北京爱科创业电子技术有限公司</p>';
-        _img = '';
-        lnglat = '116.244888,40.083556';
-        x = '116.244888';
-        y = '40.083556';
-
-        var map = new AMap.Map('map', {
-            resizeEnable: true,
-            scrollWheel: false,
-            zoom: 17,
-            center: [x, y],
-            mapStyle: 'amap://styles/whitesmoke',
-        });
-        openInfo(_para, _img);
-        var marker = new AMap.Marker({
-            icon: 'images/contact/location.png',
-            size: new AMap.Size(28, 35),
-            offset: new AMap.Pixel(-28, -20),
-            position: map.getCenter(),
-            draggable: false,
-            cursor: 'pointer'
-        });
-        marker.setMap(map);
-        marker.on('click', function () {
-            infoWindow.open(map, map.getCenter());
-        });
-
-        function openInfo(para, ewm) {
-            //构建信息窗体中显示的内容
-            var info = [];
-            info.push(
-                '<div class="map-cont"><div class="text">' + para + '</div></div>');
-            infoWindow = new AMap.InfoWindow({
-                content: info.join(""),
-                offset: new AMap.Pixel(-14, -40)
-            });
-            infoWindow.setAnchor('bottom-center')
-            infoWindow.open(map, map.getCenter());
-        }
-    }
-
-    $('.map-main').length && contactInit();
-
-</script>
-
+ 
 </html>

@@ -2443,4 +2443,221 @@
   .amap-icon img {
     width: 20px;
   }
+}
+.contact-us-subheading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-us-subheading .tit {
+  font-family: MM;
+  font-size: 46px;
+  line-height: 1;
+  color: #353535;
+}
+.contact-us-subheading .line {
+  margin-top: 24px;
+  width: 60px;
+  height: 5px;
+  background: #1caf62;
+}
+
+.contact-us {
+  padding-top: 94px;
+}
+.contact-us .us-list {
+  position: relative;
+  margin-bottom: -40px;
+  background: #fff;
+  padding: 64px 0 40px;
+  display: flex;
+  z-index: 10;
+}
+.contact-us .us-list:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 170px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.04);
+}
+.contact-us .us-list li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-us .us-list li .icon {
+  margin-bottom: 34px;
+  width: 60px;
+  height: 49px;
+}
+.contact-us .us-list li .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.contact-us .us-list li .tit {
+  margin-bottom: 24px;
+  font-family: MD;
+  font-size: 20px;
+  color: #259f3d;
+}
+.contact-us .us-list li .text {
+  text-align: center;
+}
+.contact-us .us-list li .text.text {
+  margin-bottom: 5px;
+}
+.contact-us .us-list li .text.last {
+  margin-top: 5px;
+}
+.contact-us .us-list li .text a {
+  font-family: MR;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #252d36;
+}
+.contact-us .us-list li .text p {
+  font-family: MR;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: #252d36;
+}
+.contact-us .us-list li .text.last-Two {
+  margin-top: 14px;
+}
+.contact-us .us-list li .hint {
+  white-space: pre;
+  padding: 0 10px;
+  margin: 0;
+  font-family: MM;
+  font-size: 14px;
+  color: #259f3d;
+  line-height: 1.4;
+}
+.contact-us .us-list li .code {
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.contact-us .us-list li .code img {
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .contact-us-subheading .tit {
+    font-size: 40px;
+  }
+  .contact-us .us-list li .icon {
+    margin-bottom: 24px;
+    width: 55px;
+    height: 44px;
+  }
+  .contact-us .us-list li .tit {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .contact-us .us-list li .text p,
+.contact-us .us-list li .text a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1199px) {
+  .contact-us-subheading .tit {
+    font-size: 30px;
+  }
+  .contact-us .us-list li .icon {
+    margin-bottom: 20px;
+    width: 50px;
+    height: 39px;
+  }
+  .contact-us .us-list li .tit {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .contact-us .us-list li .text p,
+.contact-us .us-list li .text a {
+    font-size: 14px;
+  }
+  .contact-us .us-list li .code {
+    width: 100px;
+  }
+}
+@media (max-width: 990px) {
+  .contact-us .us-list {
+    flex-wrap: wrap;
+    margin-bottom: -30px;
+    padding: 54px 0 30px;
+  }
+  .contact-us .us-list li {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+  .contact-us .us-list li:nth-child(5),
+.contact-us .us-list li:nth-child(6) {
+    width: 50%;
+  }
+  .contact-us-subheading .tit {
+    font-size: 24px;
+  }
+  .contact-us-subheading .line {
+    margin-top: 14px;
+    height: 3px;
+    width: 40px;
+  }
+  .contact-us .us-list li .icon {
+    margin-bottom: 20px;
+    width: 50px;
+    height: 39px;
+  }
+  .contact-us .us-list li .tit {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .contact-us .us-list li .text p,
+.contact-us .us-list li .text a {
+    font-size: 14px;
+  }
+  .contact-us .us-list li .code {
+    width: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-us .us-list li .icon {
+    margin-bottom: 14px;
+    width: 40px;
+    height: 29px;
+  }
+  .contact-us {
+    padding-top: 60px;
+  }
+  .contact-us .us-list {
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+    padding: 34px 0 10px;
+  }
+  .contact-us .us-list li {
+    width: 50%;
+    margin-bottom: 16px;
+  }
+  .contact-us .us-list li .tit {
+    margin-bottom: 6px;
+  }
+  .contact-us .us-list li .text.last-Two {
+    margin-top: 6px;
+  }
+  .contact-us .us-list li .text.last {
+    margin: 0;
+  }
+  .contact-us .us-list:after {
+    height: 500px;
+  }
+  .contact-us .us-list li .code {
+    margin-top: 5px;
+  }
 }/*# sourceMappingURL=style.css.map */

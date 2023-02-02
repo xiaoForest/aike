@@ -389,5 +389,50 @@ jQuery(document).ready(function ($) {
             }
         })
     }
+    function contactInit() {
+        var _para, _img, lnglat = [],
+            x, y;
+        _para = '<p>北京爱科创业电子技术有限公司</p>';
+        _img = '';
+        lnglat = '116.244888,40.083556';
+        x = '116.244888';
+        y = '40.083556';
+
+        var map = new AMap.Map('map', {
+            resizeEnable: true,
+            scrollWheel: false,
+            zoom: 17,
+            center: [x, y],
+            mapStyle: 'amap://styles/whitesmoke',
+        });
+        openInfo(_para, _img);
+        var marker = new AMap.Marker({
+            icon: 'images/contact/location.png',
+            size: new AMap.Size(28, 35),
+            offset: new AMap.Pixel(-28, -20),
+            position: map.getCenter(),
+            draggable: false,
+            cursor: 'pointer'
+        });
+        marker.setMap(map);
+        marker.on('click', function () {
+            infoWindow.open(map, map.getCenter());
+        });
+
+        function openInfo(para, ewm) {
+            //构建信息窗体中显示的内容
+            var info = [];
+            info.push(
+                '<div class="map-cont"><div class="text">' + para + '</div></div>');
+            infoWindow = new AMap.InfoWindow({
+                content: info.join(""),
+                offset: new AMap.Pixel(-14, -40)
+            });
+            infoWindow.setAnchor('bottom-center')
+            infoWindow.open(map, map.getCenter());
+        }
+    }
+
+    $('.map-main').length && contactInit();
 
 })
