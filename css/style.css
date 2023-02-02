@@ -2456,6 +2456,15 @@
   line-height: 1;
   color: #353535;
 }
+.contact-us-subheading .hint {
+  text-align: center;
+  margin-top: 24px;
+  line-height: 1.4;
+  font-family: ML;
+  font-size: 24px;
+  color: #16191d;
+  opacity: 0.5;
+}
 .contact-us-subheading .line {
   margin-top: 24px;
   width: 60px;
@@ -2553,6 +2562,10 @@
   .contact-us-subheading .tit {
     font-size: 40px;
   }
+  .contact-us-subheading .hint {
+    font-size: 22px;
+    margin-top: 20px;
+  }
   .contact-us .us-list li .icon {
     margin-bottom: 24px;
     width: 55px;
@@ -2570,6 +2583,10 @@
 @media (max-width: 1199px) {
   .contact-us-subheading .tit {
     font-size: 30px;
+  }
+  .contact-us-subheading .hint {
+    font-size: 20px;
+    margin-top: 16px;
   }
   .contact-us .us-list li .icon {
     margin-bottom: 20px;
@@ -2628,6 +2645,13 @@
   }
 }
 @media (max-width: 768px) {
+  .contact-us-subheading .tit {
+    font-size: 22px;
+  }
+  .contact-us-subheading .hint {
+    font-size: 14px;
+    margin-top: 10px;
+  }
   .contact-us .us-list li .icon {
     margin-bottom: 14px;
     width: 40px;
@@ -2660,4 +2684,7 @@
   .contact-us .us-list li .code {
     margin-top: 5px;
   }
+}
+.contact-us-form {
+  padding-bottom: 140px;
 }/*# sourceMappingURL=style.css.map */
