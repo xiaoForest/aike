@@ -2385,4 +2385,62 @@
   .pagingControl .item .box .text {
     font-size: 14px;
   }
+}
+.map-main .map {
+  height: 735px;
+}
+.map-main .map .amap-info-contentContainer {
+  margin-bottom: -36px;
+  margin-left: 10px;
+}
+.map-main .map .amap-info-contentContainer .amap-info-content {
+  width: 495px;
+  height: 145px;
+  background: url(../images/contact/icon-text.png) no-repeat;
+  background-size: 495px;
+  box-shadow: none;
+}
+.map-main .map .amap-info-contentContainer .amap-info-content .map-cont {
+  margin-top: 40px;
+  margin-left: 114px;
+}
+.map-main .map .amap-info-contentContainer .amap-info-content .map-cont .text {
+  font-family: MS;
+  color: #fff;
+  line-height: 1;
+  font-size: 22px;
+}
+.map-main .map .amap-info-contentContainer .amap-info-sharp {
+  display: none;
+}
+
+@media (max-width: 1366px) {
+  .map-main .map {
+    height: 600px;
+  }
+  .map-main .map .amap-info-contentContainer {
+    margin-bottom: -40px;
+    margin-left: 7px;
+  }
+  .map-main .map .amap-info-contentContainer .amap-info-content {
+    transform: scale(0.8);
+  }
+  .amap-icon img {
+    width: 40px;
+  }
+}
+@media (max-width: 990px) {
+  .map-main .map {
+    height: 500px;
+  }
+  .map-main .map .amap-info-contentContainer {
+    margin-bottom: -60px;
+    margin-left: -2px;
+  }
+  .map-main .map .amap-info-contentContainer .amap-info-content {
+    transform: scale(0.6);
+  }
+  .amap-icon img {
+    width: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

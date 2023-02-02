@@ -38,6 +38,10 @@
   font-family: "MB";
   src: url("../fonts/MiSans-Bold.ttf");
 }
+@font-face {
+  font-family: "MS";
+  src: url("../fonts/MiSans-Semibold.ttf");
+}
 @-webkit-keyframes o-upfade-top {
   0% {
     opacity: 0;

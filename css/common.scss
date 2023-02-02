@@ -38,6 +38,10 @@
     font-family: "MB";
     src: url("../fonts/MiSans-Bold.ttf");
 }
+@font-face {
+    font-family: "MS";
+    src: url("../fonts/MiSans-Semibold.ttf");
+}
 $color: #c9171d;
 $green: #0d9f53;
 @mixin transition($type...) {
