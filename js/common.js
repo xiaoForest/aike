@@ -270,6 +270,24 @@ jQuery(document).ready(function ($) {
     }
     $('.about-certification').length && aboutIndex();
 
+    function newsInit() {
+        var newsSwiper1 = new Swiper('.news-s1 .swiper-container', {
+            speed: 800,
+            parallax: true,
+            spaceBetween: 10,
+            simulateTouch: true,
+            pagination: {
+                el: '.news-s1 .swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+        });
+    }
+    $('.news-bannre').length && newsInit();
 
     if ($('.m2lcWpr').length) {
         $(window).scroll(function () {

@@ -6,6 +6,9 @@
   background: #f7f7f7;
   padding: 0 60px;
 }
+.second-nav.white {
+  background-color: #fff;
+}
 .second-nav .main-content {
   height: 60px;
   display: flex;
@@ -1952,5 +1955,209 @@
   .data-main .wrapper .data-list .li .data-ul li .item:nth-child(3) .icon-svg {
     width: 16px;
     height: 16px;
+  }
+}
+.news-bannre {
+  padding: 80px 0 60px;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item {
+  background: #fff;
+  display: flex;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes:nth-child(2) {
+  width: 46%;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .pic {
+  width: 100%;
+  height: 100%;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info {
+  padding: 66px 50px 66px 40px;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .day {
+  display: block;
+  margin-bottom: 6px;
+  font-family: MB;
+  font-size: 52px;
+  line-height: 1;
+  color: #1caf62;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .years {
+  display: block;
+  margin-bottom: 16px;
+  font-family: MD;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #1caf62;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .tit {
+  margin-bottom: 12px;
+  font-size: 26px;
+  font-family: MD;
+  line-height: 1.4;
+  color: #333;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .text {
+  font-family: MR;
+  color: #333;
+  font-size: 16px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .look {
+  margin-top: 20px;
+  width: 139px;
+  height: 48px;
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+  background: linear-gradient(45deg, #019146, #1cb063);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px 0px rgba(5, 149, 74, 0.5);
+  transition: all 0.5s ease;
+}
+.news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .look:hover {
+  transform: translateY(-5px);
+}
+.news-bannre .swiper-pagination {
+  position: relative;
+  margin-top: 44px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-bannre .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  background: #f4f4f4;
+  border: 2px #333 solid;
+  transition: all 0.3s ease;
+}
+.news-bannre .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: linear-gradient(90deg, #17aa5d, #099b4f);
+  border-color: #17aa5d;
+}
+
+@media (max-width: 1560px) {
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info {
+    padding: 56px 40px 56px 30px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes:nth-child(2) {
+    width: 50%;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .day {
+    font-size: 48px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .years {
+    font-size: 16px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .tit {
+    font-size: 24px;
+  }
+  .news-bannre .swiper-pagination {
+    margin-top: 34px;
+  }
+}
+@media (max-width: 1440px) {
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info {
+    padding: 56px 45px 56px 40px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes:nth-child(2) {
+    width: 72%;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .day {
+    font-size: 38px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .years {
+    font-size: 14px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .tit {
+    font-size: 20px;
+  }
+  .news-bannre .swiper-pagination {
+    margin-top: 28px;
+  }
+}
+@media (max-width: 1366px) {
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info {
+    padding: 56px 45px 56px 40px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes:nth-child(2) {
+    width: 62%;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .day {
+    font-size: 48px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .years {
+    font-size: 16px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .tit {
+    font-size: 24px;
+  }
+  .news-bannre .swiper-pagination {
+    margin-top: 34px;
+  }
+}
+@media (max-width: 1199px) {
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info {
+    padding: 26px 25px 26px 20px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes:nth-child(2) {
+    width: 100%;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .day {
+    font-size: 28px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .years {
+    font-size: 14px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .tit {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .text {
+    font-size: 14px;
+  }
+  .news-bannre .swiper-pagination {
+    margin-top: 20px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .look {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 990px) {
+  .news-bannre {
+    padding: 50px 0 30px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item {
+    flex-direction: column;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .day {
+    font-size: 24px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .years {
+    margin-bottom: 10px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .tit {
+    font-size: 16px;
+  }
+  .news-bannre .news-swiper .swiper-wrapper .swiper-slide .item .boxes .info .look {
+    width: 90px;
+    height: 36px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

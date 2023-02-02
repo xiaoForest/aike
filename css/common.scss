@@ -34,6 +34,10 @@
     font-family: "MD";
     src: url("../fonts/MiSans-Demibold.ttf");
 }
+@font-face {
+    font-family: "MB";
+    src: url("../fonts/MiSans-Bold.ttf");
+}
 $color: #c9171d;
 $green: #0d9f53;
 @mixin transition($type...) {
