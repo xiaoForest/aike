@@ -336,7 +336,7 @@ jQuery(document).ready(function ($) {
     }
 
     function recruitList() {
-        $('.recruit-list .wrapper-dropdown').click(function(){
+        $('.recruit-list .wrapper-dropdown').click(function () {
             $(this).toggleClass('active').parents('.boxes').siblings().find('.wrapper-dropdown').removeClass('active');
         })
         $('.recruit-list ul li').click(function () {
