@@ -3686,7 +3686,7 @@
         padding-bottom: 20px;
         background-size: auto;
     }
-    .talent-contest .idea-ul li .box .pic{
+    .talent-contest .idea-ul li .box .pic {
         transform: translateY(-30px);
     }
     .talent-contest .idea-ul li {
@@ -3699,5 +3699,46 @@
         padding: 20px;
         opacity: 1;
         transform: translateY(0);
+    }
+}
+.talent-occupation {
+    height: 900px;
+    background: url(../images/talent-occupation.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 1560px) {
+
+}
+@media (max-width: 1440px) {
+    .talent-occupation{
+        height: 950px;
+    }
+}
+@media (max-width: 1366px) {
+    .talent-occupation{
+        height: 100vh;
+    }
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 990px) {
+    .talent-occupation{
+        height: 60vh;
+    }
+}
+@media (max-width: 768px) {
+    .talent-occupation{
+        height: 50vh;
+        background-attachment: initial;
     }
 }
