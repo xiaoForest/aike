@@ -335,53 +335,19 @@ jQuery(document).ready(function ($) {
         })
     }
 
-    function DropDown(el) {
-        this.dd = el;
-        this.text = this.dd.children('p');
-        this.placeholder = this.text.children('span');
-        this.opts = this.dd.find('ul.dropdown > li');
-        this.val = '';
-        this.index = -1;
-        this.initEvents();
+    function recruitList() {
+        $('.recruit-list-s1 .wrapper-dropdown').click(function(){
+            $(this).toggleClass('active').parents('.boxes').siblings().find('.wrapper-dropdown').removeClass('active');
+        })
+        $('.recruit-list-s1 ul li').click(function () {
+            var text = $(this).text();
+            $('.recruit-list-s1 .wrapper-dropdown').addClass('find')
+            $(this).parents('.select').find('input').attr('value', text);
+        })
     }
-    DropDown.prototype = {
-        initEvents: function () {
-            var obj = this;
+    $('.recruit-list-s1').length && recruitList();
 
-            obj.dd.on('click', function (event) {
-                $(this).toggleClass('active').parents('.boxes').siblings().find('.wrapper-dropdown').removeClass('active');
-                return false;
-            });
 
-            obj.opts.on('click', function () {
-                var opt = $(this);
-                obj.val = opt.text();
-                obj.index = opt.index();
-                obj.placeholder.text(obj.val);
-                obj.placeholder.addClass('change')
-            });
-        },
-        getValue: function () {
-            return this.val;
-        },
-        getIndex: function () {
-            return this.index;
-        }
-    }
-
-    $(function () {
-        if ($('.wrapper-dropdown').length) {
-            new DropDown($('.wrapper-dropdown-0'));
-            new DropDown($('.wrapper-dropdown-1'));
-            new DropDown($('.wrapper-dropdown-2'));
-            new DropDown($('.wrapper-dropdown-3'));
-            $(document).click(function () {
-                // all dropdowns
-                $('.wrapper-dropdown').removeClass('active');
-            });
-        }
-
-    });
     if ($('.data-main').length) {
         $('.data-list .li .row').click(function () {
             var _par = $(this).parent();

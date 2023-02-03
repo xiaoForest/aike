@@ -1720,8 +1720,14 @@
 .wrapper-dropdown p {
   color: #c7c7c7;
   font-family: ML;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-.wrapper-dropdown p span {
+.wrapper-dropdown p input {
+  display: inline-block;
+  border: 0;
+  background: none;
   padding: 0 26px;
   color: #444;
   font-size: 20px;
@@ -1807,6 +1813,10 @@
   opacity: 1;
   pointer-events: auto;
 }
+.wrapper-dropdown.hind .dropdown {
+  opacity: 0;
+  pointer-events: none;
+}
 
 @media (max-width: 1779px) {
   .data-main {
@@ -1864,7 +1874,7 @@
   .data-main .wrapper .data-top .boxes:nth-child(2) {
     width: 90%;
   }
-  .wrapper-dropdown p span,
+  .wrapper-dropdown p input,
 .data-main .wrapper .data-top .boxes .truck input {
     font-size: 16px;
   }
@@ -1892,7 +1902,7 @@
   .data-main .wrapper .data-top .boxes:nth-child(2) {
     width: 100%;
   }
-  .wrapper-dropdown p span,
+  .wrapper-dropdown p input,
 .data-main .wrapper .data-top .boxes .truck input {
     font-size: 14px;
   }
@@ -3595,12 +3605,15 @@
   transition: all 0.3s ease;
 }
 .talent-recruitment .talents-form .boxes:nth-child(1) {
-  z-index: 2;
+  z-index: 3;
 }
 .talent-recruitment .talents-form .boxes:nth-child(2) {
-  z-index: 2;
+  z-index: 3;
 }
 .talent-recruitment .talents-form .boxes:nth-child(3) {
+  z-index: 1;
+}
+.talent-recruitment .talents-form .boxes:nth-child(4) {
   z-index: 1;
 }
 .talent-recruitment .talents-form .boxes:hover {
@@ -3627,14 +3640,15 @@
   height: 16px;
   fill: #a6a6a6;
 }
-.talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p span {
+.talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p input {
   font-family: MR;
   color: #a6a6a6;
   padding: 0;
   font-weight: normal;
   font-size: 16px;
+  cursor: pointer;
 }
-.talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p span.change {
+.talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p input.change {
   color: #000;
 }
 .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown input {
@@ -3666,7 +3680,7 @@
   }
 }
 @media (max-width: 1199px) {
-  .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p span,
+  .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p input,
 .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown input {
     font-size: 14px;
   }

@@ -1824,7 +1824,13 @@
     p {
         color: #c7c7c7;
         font-family: ML;
-        span {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        input {
+            display: inline-block;
+            border: 0;
+            background: none;
             padding: 0 26px;
             color: #444;
             font-size: 20px;
@@ -1924,6 +1930,12 @@
             pointer-events: auto;
         }
     }
+    &.hind {
+        .dropdown {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
 }
 @media (max-width: 1779px) {
     .data-main {
@@ -1983,7 +1995,7 @@
     .data-main .wrapper .data-top .boxes:nth-child(2) {
         width: 90%;
     }
-    .wrapper-dropdown p span,
+    .wrapper-dropdown p input,
     .data-main .wrapper .data-top .boxes .truck input {
         font-size: 16px;
     }
@@ -2011,7 +2023,7 @@
     .data-main .wrapper .data-top .boxes:nth-child(2) {
         width: 100%;
     }
-    .wrapper-dropdown p span,
+    .wrapper-dropdown p input,
     .data-main .wrapper .data-top .boxes .truck input {
         font-size: 14px;
     }
@@ -3772,13 +3784,16 @@
             height: 56px;
             border: 2px #e6e6e6 solid;
             transition: all 0.3s ease;
-            &:nth-child(1){
-                z-index: 2;
+            &:nth-child(1) {
+                z-index: 3;
             }
-            &:nth-child(2){
-                z-index: 2;
+            &:nth-child(2) {
+                z-index: 3;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
+                z-index: 1;
+            }
+            &:nth-child(4) {
                 z-index: 1;
             }
             &:hover {
@@ -3804,12 +3819,13 @@
                         fill: #a6a6a6;
                     }
                     p {
-                        span {
+                        input {
                             font-family: MR;
                             color: #a6a6a6;
                             padding: 0;
                             font-weight: normal;
                             font-size: 16px;
+                            cursor: pointer;
                             &.change {
                                 color: #000;
                             }
@@ -3853,7 +3869,7 @@
     }
 }
 @media (max-width: 1199px) {
-    .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p span,
+    .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p input,
     .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown input {
         font-size: 14px;
     }
@@ -3888,7 +3904,7 @@
     .talent-recruitment .talents-headline {
         padding: 50px 0 25px;
     }
- 
+
     .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown {
         padding: 0 10px 0 10px;
     }
