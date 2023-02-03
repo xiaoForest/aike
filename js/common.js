@@ -336,16 +336,16 @@ jQuery(document).ready(function ($) {
     }
 
     function recruitList() {
-        $('.recruit-list-s1 .wrapper-dropdown').click(function(){
+        $('.recruit-list .wrapper-dropdown').click(function(){
             $(this).toggleClass('active').parents('.boxes').siblings().find('.wrapper-dropdown').removeClass('active');
         })
-        $('.recruit-list-s1 ul li').click(function () {
+        $('.recruit-list ul li').click(function () {
             var text = $(this).text();
-            $('.recruit-list-s1 .wrapper-dropdown').addClass('find')
+            $('.recruit-list .wrapper-dropdown').addClass('find')
             $(this).parents('.select').find('input').attr('value', text);
         })
     }
-    $('.recruit-list-s1').length && recruitList();
+    $('.recruit-list').length && recruitList();
 
 
     if ($('.data-main').length) {

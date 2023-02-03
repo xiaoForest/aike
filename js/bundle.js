@@ -254,7 +254,7 @@ jQuery(document).ready(function($) {
 
 
     function recruitList(){
-        $('.recruit-list-s1 ul li').click(function(){
+        $('.recruit-list ul li').click(function(){
             var text = $(this).text();
             $(this).parents('.select').find('input').attr('value',text);
         })
