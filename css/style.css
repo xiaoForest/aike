@@ -3133,4 +3133,39 @@
     height: 38px;
     font-size: 14px;
   }
+}
+.iShare {
+  position: fixed;
+  top: 30vh;
+  left: 20px;
+  z-index: 100;
+}
+.iShare .row .item {
+  margin-bottom: 2px;
+  width: 48px;
+  height: 48px;
+  background: #ebf0f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.iShare .row .item .icon-svg {
+  fill: #96b5d7;
+  width: 22px;
+  height: 22px;
+  transition: all 0.3s ease;
+}
+.iShare .row .item:hover {
+  background: #1caf62;
+}
+.iShare .row .item:hover .icon-svg {
+  fill: #fff;
+}
+
+@media (max-width: 768px) {
+  .iShare {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
