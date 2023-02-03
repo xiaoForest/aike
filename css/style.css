@@ -3525,6 +3525,7 @@
   }
 }
 .talent-occupation {
+  position: relative;
   height: 900px;
   background: url(../images/talent-occupation.jpg) no-repeat;
   background-size: cover;
@@ -3538,6 +3539,11 @@
 }
 .talent-occupation .wrapper img {
   width: 100%;
+}
+.talent-occupation canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1440px) {

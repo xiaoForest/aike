@@ -3702,6 +3702,7 @@
     }
 }
 .talent-occupation {
+    position: relative;
     height: 900px;
     background: url(../images/talent-occupation.jpg) no-repeat;
     background-size: cover;
@@ -3715,29 +3716,33 @@
             width: 100%;
         }
     }
+    canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 }
 @media (max-width: 1560px) {
-
 }
 @media (max-width: 1440px) {
-    .talent-occupation{
+    .talent-occupation {
         height: 950px;
     }
 }
 @media (max-width: 1366px) {
-    .talent-occupation{
+    .talent-occupation {
         height: 100vh;
     }
 }
 @media (max-width: 1199px) {
 }
 @media (max-width: 990px) {
-    .talent-occupation{
+    .talent-occupation {
         height: 60vh;
     }
 }
 @media (max-width: 768px) {
-    .talent-occupation{
+    .talent-occupation {
         height: 50vh;
         background-attachment: initial;
     }
