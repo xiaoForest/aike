@@ -349,7 +349,7 @@ jQuery(document).ready(function ($) {
             var obj = this;
 
             obj.dd.on('click', function (event) {
-                $(this).toggleClass('active');
+                $(this).toggleClass('active').parents('.boxes').siblings().find('.wrapper-dropdown').removeClass('active');
                 return false;
             });
 
@@ -358,6 +358,7 @@ jQuery(document).ready(function ($) {
                 obj.val = opt.text();
                 obj.index = opt.index();
                 obj.placeholder.text(obj.val);
+                obj.placeholder.addClass('change')
             });
         },
         getValue: function () {
@@ -370,11 +371,13 @@ jQuery(document).ready(function ($) {
 
     $(function () {
         if ($('.wrapper-dropdown').length) {
-            let wrapperDropdown = new DropDown($('.wrapper-dropdown'));
-
+            new DropDown($('.wrapper-dropdown-0'));
+            new DropDown($('.wrapper-dropdown-1'));
+            new DropDown($('.wrapper-dropdown-2'));
+            new DropDown($('.wrapper-dropdown-3'));
             $(document).click(function () {
                 // all dropdowns
-                $('.wrapper-dropdown-3').removeClass('active');
+                $('.wrapper-dropdown').removeClass('active');
             });
         }
 
