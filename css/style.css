@@ -4144,6 +4144,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .product-details-banner .details-banner .boxes .info .row-btns .btn:hover {
   transform: translateY(-5px);
