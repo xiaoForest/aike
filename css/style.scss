@@ -3766,6 +3766,7 @@
 }
 
 .talent-recruitment {
+    padding-bottom: 120px;
     position: relative;
     background: #f7f7f7;
     .talents-headline {
@@ -3855,8 +3856,14 @@
 @media (max-width: 1560px) {
 }
 @media (max-width: 1440px) {
+    .talent-recruitment .talents-form {
+        padding-bottom: 36px;
+    }
 }
 @media (max-width: 1366px) {
+    .talent-recruitment .talents-form {
+        padding-bottom: 26px;
+    }
     .talent-recruitment .talents-headline {
         padding: 80px 0 40px;
     }
@@ -3869,12 +3876,18 @@
     }
 }
 @media (max-width: 1199px) {
+    .talent-recruitment .talents-form {
+        padding-bottom: 20px;
+    }
     .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown p input,
     .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown input {
         font-size: 14px;
     }
 }
 @media (max-width: 990px) {
+    .talent-recruitment .talents-form {
+        padding-bottom: 15px;
+    }
     .talent-recruitment .talents-headline {
         padding: 65px 0 30px;
     }
@@ -3901,6 +3914,9 @@
     }
 }
 @media (max-width: 768px) {
+    .talent-recruitment .talents-form {
+        padding-bottom: 10px;
+    }
     .talent-recruitment .talents-headline {
         padding: 50px 0 25px;
     }
@@ -3919,5 +3935,345 @@
     .talent-recruitment .talents-form .boxes .truck .wrapper-dropdown .btn .icon-svg {
         width: 20px;
         height: 20px;
+    }
+}
+
+.talent-list {
+    .list {
+        li {
+            &:first-child {
+                .row {
+                    .roof {
+                        border-top: 1px #e6e6e6 solid;
+                    }
+                }
+            }
+            &:nth-child(2n + 1) {
+                .row {
+                    .roof {
+                        background: #fff;
+                    }
+                }
+            }
+
+            .row {
+                .roof {
+                    padding: 0 54px 0 34px;
+                    height: 100px;
+                    border-bottom: 1px #e6e6e6 solid;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    .item {
+                        display: flex;
+
+                        flex-direction: column;
+                        &:nth-child(1) {
+                            width: 30%;
+                        }
+                        &:nth-child(2) {
+                            width: 20%;
+                        }
+                        &:nth-child(3) {
+                            width: 20%;
+                        }
+                        &:nth-child(4) {
+                            width: 20%;
+                        }
+                        .tit {
+                            font-family: MR;
+                            font-size: 22px;
+                            line-height: 1.4;
+                            color: #555;
+                            font-weight: normal;
+                        }
+                        .text {
+                            display: block;
+                            color: #666;
+                            font-family: ML;
+                            font-size: 20px;
+                            &:last-child {
+                                margin-top: 6px;
+                                font-size: 18px;
+                                color: #333333;
+                            }
+                            &.time {
+                                font-size: 15px;
+                            }
+                        }
+                        .icon-svg {
+                            width: 20px;
+                            height: 20px;
+                            transition: all 0.3s ease;
+                            transform-origin: 50% 50%;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+            &.active {
+                .row {
+                    .roof {
+                        background: #1caf62;
+                        .item {
+                            .tit {
+                                color: #fff;
+                            }
+                            .text {
+                                color: #fff;
+                            }
+                            .icon-svg {
+                                transform: rotate(0);
+                                fill: #fff;
+                            }
+                        }
+                    }
+                    .room {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .room {
+            position: relative;
+            height: 654px;
+            background: #fff;
+            display: none;
+            cursor: pointer;
+            overflow: hidden;
+            .pic {
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .info {
+                margin-left: 37%;
+                padding-right: 20px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                .con {
+                    h4 {
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        margin: 30px 0 10px;
+                        font-family: MM;
+                        font-size: 22px;
+                        line-height: 1.4;
+                        color: #333;
+                    }
+                    p {
+                        font-family: MN;
+                        line-height: 2;
+                        font-size: 16px;
+                        color: #808080;
+                    }
+                    .btns {
+                        margin-top: 40px;
+                        width: 180px;
+                        height: 48px;
+                        font-size: 14px;
+                        line-height: 1;
+                        color: #fff;
+                        background: linear-gradient(45deg, #019146, #1cb063);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0 10px 30px 0px rgb(5 149 74 / 50%);
+                        transition: all 0.5s ease;
+                        &:hover {
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1560px) {
+}
+@media (max-width: 1440px) {
+    .talent-list .list li .row .roof {
+        height: 80px;
+    }
+    .talent-list .list li .row .roof .item .tit {
+        font-size: 20px;
+    }
+    .talent-list .list li .row .roof .item .text {
+        font-size: 18px;
+    }
+    .talent-list .list .room {
+        height: 500px;
+    }
+    .talent-list .list .room .info {
+        margin-left: 32%;
+    }
+    .talent-list .list .room .info .con h4 {
+        font-size: 20px;
+        margin: 20px 0 10px;
+    }
+    .talent-list .list .room .info .con p {
+        font-size: 14px;
+    }
+    .talent-list .list .room .info .con .btns {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 1366px) {
+    .talent-recruitment {
+        padding-bottom: 110px;
+    } 
+    .talent-list .list li .row .roof {
+        height: 70px;
+    }
+    .talent-list .list li .row .roof .item .tit {
+        font-size: 18px;
+    }
+    .talent-list .list li .row .roof .item .text {
+        font-size: 16px;
+    }
+    .talent-list .list li .row .roof .item .text:last-child {
+        font-size: 14px;
+    }
+    .talent-list .list .room {
+        height: 500px;
+    }
+    .talent-list .list .room .info {
+        margin-left: 30%;
+    }
+    .talent-list .list .room .info .con h4 {
+        font-size: 18px;
+        margin: 18px 0 8px;
+    }
+    .talent-list .list .room .info .con p {
+        font-size: 14px;
+    }
+    .talent-list .list .room .info .con .btns {
+        margin-top: 20px;
+        width: 140px;
+        height: 42px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 1199px) {
+    .talent-recruitment {
+        padding-bottom: 100px;
+    } 
+    .talent-list .list li .row .roof {
+        height: 60px;
+        padding: 0 44px 0 24px;
+    }
+    .talent-list .list li .row .roof .item .tit {
+        font-size: 16px;
+    }
+    .talent-list .list li .row .roof .item .text {
+        font-size: 14px;
+    }
+    .talent-list .list .room {
+        height: auto;
+        padding: 30px 0;
+    }
+    .talent-list .list .room .info {
+        position: relative;
+    }
+    .talent-list .list .room .pic {
+        display: none;
+    }
+    .talent-list .list .room .info {
+        padding: 0;
+        margin-left: 0;
+    }
+    .talent-list .list .room .info .con {
+        padding: 0 30px;
+    }
+    .talent-list .list .room .info .con h4 {
+        font-size: 16px;
+        margin: 16px 0 6px;
+    }
+    .talent-list .list .room .info .con p {
+        font-size: 14px;
+    }
+    .talent-list .list .room .info .con .btns {
+        margin-top: 20px;
+        width: 120px;
+        height: 38px;
+        font-size: 14px;
+    }
+    .talent-list .list li .row .roof .item .icon-svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+@media (max-width: 990px) {
+    .talent-recruitment {
+        padding-bottom: 80px;
+    } 
+    .talent-list .list li .row .roof {
+        height: auto;
+        padding: 14px;
+    }
+    .talent-list .list li .row .roof .item .tit {
+        font-size: 14px;
+    }
+    .talent-list .list li .row .roof .item .text {
+        font-size: 12px;
+    }
+    .talent-list .list li .row .roof .item .text:last-child {
+        font-size: 12px;
+    }
+    .talent-list .list .room {
+        height: auto;
+        padding: 30px 0;
+    }
+    .talent-list .list .room .info {
+        position: relative;
+    }
+    .talent-list .list .room .pic {
+        display: none;
+    }
+    .talent-list .list .room .info {
+        padding: 0;
+        margin-left: 0;
+    }
+    .talent-list .list .room .info .con {
+        padding: 0 20px;
+    }
+    .talent-list .list .room .info .con h4 {
+        font-size: 16px;
+        margin: 16px 0 6px;
+    }
+    .talent-list .list .room .info .con p {
+        font-size: 14px;
+        text-align: justify;
+    }
+    .talent-list .list .room .info .con .btns {
+        margin-top: 20px;
+        width: 100px;
+        height: 34px;
+        font-size: 12px;
+    }
+    .talent-list .list li .row .roof .item .icon-svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+@media (max-width: 768px) {
+   .talent-recruitment {
+        padding-bottom: 60px;
+    } 
+    .talent-list .list li .row .roof .item .icon-svg {
+        width: 12px;
+        height: 12px;
     }
 }

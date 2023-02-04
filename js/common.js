@@ -348,7 +348,7 @@ jQuery(document).ready(function ($) {
     $('.recruit-list').length && recruitList();
 
 
-    if ($('.data-main').length) {
+    function dataMain() {
         $('.data-list .li .row').click(function () {
             var _par = $(this).parent();
             if (!_par.hasClass('on')) {
@@ -358,6 +358,21 @@ jQuery(document).ready(function ($) {
             }
         })
     }
+    $('.data-main').length && dataMain()
+
+
+    function talentList() {
+        $('.talent-list li .roof').click(function () {
+            var _par = $(this).parent().parent();
+            if (!_par.hasClass('active')) {
+                _par.siblings().find('.room').slideUp(), _par.find('.room').slideDown();
+                _par.addClass('active').siblings().removeClass('active')
+            } else {
+                _par.removeClass('active').find('.room').slideUp();
+            }
+        })
+    }
+    $('.talent-list').length && talentList()
 
     function contactInit() {
         var _para, _img, lnglat = [],
