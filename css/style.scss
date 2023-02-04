@@ -4313,11 +4313,11 @@
                         position: relative;
                         font-family: MN;
                         color: #555;
-                        line-height:1.4;
+                        line-height: 1.4;
                         font-size: 18px;
                         &:after {
                             position: absolute;
-                            content: '';
+                            content: "";
                             display: block;
                             width: 4px;
                             height: 4px;
@@ -4339,7 +4339,7 @@
                         line-height: 1.4;
                         &:after {
                             position: absolute;
-                            content: '';
+                            content: "";
                             display: block;
                             width: 4px;
                             height: 4px;
@@ -4359,7 +4359,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        transition: all .3s ease;
+                        transition: all 0.3s ease;
                         cursor: pointer;
                         &:hover {
                             transform: translateY(-5px);
@@ -4419,7 +4419,7 @@
         font-size: 42px;
         margin-bottom: 16px;
     }
-    .product-details-banner .details-banner .boxes .info .cn-ul{
+    .product-details-banner .details-banner .boxes .info .cn-ul {
         margin-bottom: 22px;
     }
     .product-details-banner .details-banner .boxes .info .us-ul li,
@@ -4440,7 +4440,7 @@
         font-size: 38px;
         margin-bottom: 12px;
     }
-    .product-details-banner .details-banner .boxes .info .cn-ul{
+    .product-details-banner .details-banner .boxes .info .cn-ul {
         margin-bottom: 18px;
     }
     .product-details-banner .details-banner .boxes .info .us-ul li,
@@ -4470,7 +4470,6 @@
         margin: 20px auto;
     }
 
-
     .product-details-banner .details-banner .boxes .info .english {
         font-size: 22px;
     }
@@ -4478,13 +4477,12 @@
         font-size: 34px;
         margin-bottom: 8px;
     }
-    .product-details-banner .details-banner .boxes .info .cn-ul{
+    .product-details-banner .details-banner .boxes .info .cn-ul {
         margin-bottom: 14px;
     }
     .product-details-banner .details-banner .boxes .info .row-btns {
         margin-top: 16px;
     }
-
 }
 @media (max-width: 768px) {
     .product-details-banner {
@@ -4499,7 +4497,7 @@
         font-size: 22px;
         margin-bottom: 6;
     }
-    .product-details-banner .details-banner .boxes .info .cn-ul{
+    .product-details-banner .details-banner .boxes .info .cn-ul {
         margin-bottom: 12px;
     }
     .product-details-banner .details-banner .boxes .info .row-btns {
@@ -4557,4 +4555,145 @@
             height: auto;
         }
     }
+    .product-table {
+        table {width: 100%;
+            tr {
+                th {
+                    height: 80px;
+                    border: 1px #e9e9e9 solid;
+                    background: #f9f9f9;
+                    font-family: MM;
+                    font-size: 24px;
+                    font-weight: normal;
+                    text-align: center;
+                }
+                td {
+                    height: 66px;
+                    border: 1px #e9e9e9 solid;
+                    font-family: MN;
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1560px) {
+    .product-details-table {
+        padding: 90px 0 160px;
+    }
+    .product-headline {
+        margin-bottom: 40px;
+    }
+    .product-headline .tit {
+        font-size: 42px;
+    }
+    .product-details-table .ts-img {
+        margin-bottom: 80px;
+    }
+    .product-details-table .product-table table tr th {
+        font-size: 22px;
+        height: 75px;
+    }
+    .product-details-table .product-table table tr td  {
+        height: 60px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 1440px) {
+    .product-details-table {
+        padding: 80px 0 150px;
+    }
+    .product-headline {
+        margin-bottom: 30px;
+    }
+    .product-headline .tit {
+        font-size: 36px;
+    }
+    .product-details-table .ts-img {
+        margin-bottom: 70px;
+    }
+    .product-details-table .product-table table tr th {
+        font-size: 20px;
+        height: 70px;
+    }
+    .product-details-table .product-table table tr td  {
+        height: 55px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 1366px) {
+    .product-details-table {
+        padding: 70px 0 120px;
+    }
+    .product-headline {
+        margin-bottom: 26px;
+    }
+    .product-headline .tit {
+        font-size: 32px;
+    }
+    .product-details-table .ts-img {
+        margin-bottom: 60px;
+    }
+    .product-details-table .product-table table tr th {
+        font-size: 18px;
+        height: 66px;
+    }
+    .product-details-table .product-table table tr td  {
+        height: 50px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 1199px) {
+    .product-details-table {
+        padding: 60px 0 100px;
+    }
+    .product-headline {
+        margin-bottom: 22px;
+    }
+    .product-headline .tit {
+        font-size: 28px;
+    }
+    .product-details-table .ts-img {
+        margin-bottom: 50px;
+    }
+    .product-details-table .product-table table tr th {
+        font-size: 16px;
+        height: 60px;
+    }
+    .product-details-table .product-table table tr td  {
+        height: 46px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 990px) {
+}
+@media (max-width: 768px) {
+    .product-details-table {
+        padding: 40px 0 60px;
+    }
+    .product-headline {
+        margin-bottom: 18px;
+    }
+    .product-headline .tit {
+        font-size: 22px;
+    }
+    .product-headline .line {
+        height: 3px;
+        width: 40px;
+    }
+    .product-details-table .ts-img {
+        margin-bottom: 30px;
+    }
+    .product-details-table .product-table table tr th {
+        font-size: 12px;
+        height: 50px;
+        line-height: 1.4;
+    }
+    .product-details-table .product-table table tr td  {
+        height: 40px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+ 
 }
