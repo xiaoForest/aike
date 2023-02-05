@@ -4712,6 +4712,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 .product-liveapp .row .list .item:last-child {
   border-right: 1px rgba(255, 255, 255, 0.3) solid;
@@ -4723,7 +4724,9 @@
   opacity: 0.7;
 }
 .product-liveapp .row .list .item .box {
+  position: relative;
   padding: 0 50px;
+  overflow: hidden;
 }
 .product-liveapp .row .list .item .box .pic {
   height: 65px;
@@ -4748,17 +4751,25 @@
   transition: all 0.5s ease;
 }
 .product-liveapp .row .list .item .box .text {
-  opacity: 0;
-  transform: translateY(20px);
+  width: 20em;
   margin-top: 15px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
 }
 .product-liveapp .row .list .item .box .text p {
   font-size: 18px;
   line-height: 1.6;
   color: #fff;
 }
+.product-liveapp .row .list .item:hover {
+  width: 30%;
+}
+.product-liveapp .row .list .item:hover .box .pic {
+  opacity: 1;
+}
+.product-liveapp .row .list .item:hover .box .tit {
+  opacity: 1;
+}
 .product-liveapp .row .list .item:hover .box .text {
   opacity: 1;
-  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */
