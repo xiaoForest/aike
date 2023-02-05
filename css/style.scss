@@ -4874,15 +4874,16 @@
     .product-parameter .tab-nav {
         margin-bottom: 50px;
     }
-    .swiper-product .button-prev.button-next, .swiper-product .button-prev.button-prev {
+    .swiper-product .button-prev.button-next,
+    .swiper-product .button-prev.button-prev {
         left: -50px;
     }
-    .swiper-product .button-prev.button-next, .swiper-product .button-next.button-next {
+    .swiper-product .button-prev.button-next,
+    .swiper-product .button-next.button-next {
         right: -50px;
     }
 }
 @media (max-width: 1366px) {
-
     .product-parameter .tab-nav {
         flex-wrap: wrap;
     }
@@ -4914,7 +4915,8 @@
     .swiper-product .swiper-pagination {
         margin-top: 10px;
     }
-    .swiper-product .button-next.button-next, .swiper-product .button-prev.button-prev {
+    .swiper-product .button-next.button-next,
+    .swiper-product .button-prev.button-prev {
         display: none;
     }
     .swiper-product .swiper-pagination span {
@@ -4924,5 +4926,83 @@
     .swiper-product .swiper-pagination span.swiper-pagination-bullet-active {
         width: 12px;
         height: 12px;
+    }
+}
+.product-liveapp-wrap {
+    padding-top: 140px;
+}
+.product-liveapp {
+    position: relative;
+    height: 720px;
+    background: url(../images/liveapp-bg.jpg) no-repeat center;
+    background-size: cover;
+    .row {
+        height: 100%;
+        .list {
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            .item {
+                height: 100%;
+                width: 20%;
+                border-left: 1px rgba(255, 255, 255, 0.3) solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:last-child {
+                    border-right: 1px rgba(255, 255, 255, 0.3) solid;
+                }
+                .line {
+                    background: #fff;
+                    width: 1px;
+                    height: 100%;
+                    opacity: 0.7;
+                }
+                .box {
+                    padding: 0 50px;
+                    .pic {
+                        height: 65px;
+                        height: 65px;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                        opacity: 0.3;
+                        transition: all 0.5s ease;
+                    }
+                    .tit {
+                        margin-top: 50px;
+                        color: #fff;
+                        font-weight: normal;
+                        font-size: 22px;
+                        font-family: MR;
+                        line-height: 1;
+                        opacity: 0.3;
+                        transition: all 0.5s ease;
+                    }
+                    .text {
+                        opacity: 0;
+                        transform: translateY(20px);
+                        margin-top: 15px;
+                        transition: all 0.5s ease;
+                        p {
+                            font-size: 18px;
+                            line-height: 1.6;
+                            color: #fff;
+                        }
+                    }
+                }
+                &:hover {
+                    .box {
+                        .text {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

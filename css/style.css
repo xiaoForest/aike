@@ -4637,10 +4637,12 @@
   .product-parameter .tab-nav {
     margin-bottom: 50px;
   }
-  .swiper-product .button-prev.button-next, .swiper-product .button-prev.button-prev {
+  .swiper-product .button-prev.button-next,
+.swiper-product .button-prev.button-prev {
     left: -50px;
   }
-  .swiper-product .button-prev.button-next, .swiper-product .button-next.button-next {
+  .swiper-product .button-prev.button-next,
+.swiper-product .button-next.button-next {
     right: -50px;
   }
 }
@@ -4671,7 +4673,8 @@
   .swiper-product .swiper-pagination {
     margin-top: 10px;
   }
-  .swiper-product .button-next.button-next, .swiper-product .button-prev.button-prev {
+  .swiper-product .button-next.button-next,
+.swiper-product .button-prev.button-prev {
     display: none;
   }
   .swiper-product .swiper-pagination span {
@@ -4682,4 +4685,80 @@
     width: 12px;
     height: 12px;
   }
+}
+.product-liveapp-wrap {
+  padding-top: 140px;
+}
+
+.product-liveapp {
+  position: relative;
+  height: 720px;
+  background: url(../images/liveapp-bg.jpg) no-repeat center;
+  background-size: cover;
+}
+.product-liveapp .row {
+  height: 100%;
+}
+.product-liveapp .row .list {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.product-liveapp .row .list .item {
+  height: 100%;
+  width: 20%;
+  border-left: 1px rgba(255, 255, 255, 0.3) solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-liveapp .row .list .item:last-child {
+  border-right: 1px rgba(255, 255, 255, 0.3) solid;
+}
+.product-liveapp .row .list .item .line {
+  background: #fff;
+  width: 1px;
+  height: 100%;
+  opacity: 0.7;
+}
+.product-liveapp .row .list .item .box {
+  padding: 0 50px;
+}
+.product-liveapp .row .list .item .box .pic {
+  height: 65px;
+  height: 65px;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+.product-liveapp .row .list .item .box .pic img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.product-liveapp .row .list .item .box .tit {
+  margin-top: 50px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 22px;
+  font-family: MR;
+  line-height: 1;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+.product-liveapp .row .list .item .box .text {
+  opacity: 0;
+  transform: translateY(20px);
+  margin-top: 15px;
+  transition: all 0.5s ease;
+}
+.product-liveapp .row .list .item .box .text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+}
+.product-liveapp .row .list .item:hover .box .text {
+  opacity: 1;
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */
