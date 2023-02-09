@@ -421,7 +421,7 @@
                     dt {
                         strong {
                             color: #06974b;
-                            text-shadow: #2cc976 2px 12px 10px;
+                            text-shadow: rgba(6, 151, 75, 0.6) 2px 8px 12px;
                         }
                     }
                 }
@@ -929,7 +929,7 @@
     .home-product .product-ul .item .box .info-wrap .info .tit {
         font-size: 16px;
     }
-    .home-product .product-ul .item .box .info-wrap .info .english{
+    .home-product .product-ul .item .box .info-wrap .info .english {
         margin-top: 8px;
     }
     .home-product .product-ul .item .halo,
@@ -943,11 +943,37 @@
 }
 
 .home-technology {
+    position: relative;
     height: 900px;
-    background: url(../images/home-technology-bg.jpg) no-repeat center;
-    background-size: cover;
+    // background: url(../images/home-technology-bg.jpg) no-repeat center;
+    // background-size: cover;
     // background-attachment: fixed;
     overflow: hidden;
+    .bg-wrap {
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &.on {
+                opacity: 1;
+            }
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        z-index: 2;
+    }
     .plate-head {
         margin-top: 290px;
         .headline {
@@ -962,6 +988,7 @@
         display: flex;
         flex-wrap: wrap;
         .item {
+            display: block;
             position: relative;
             margin-right: 15px;
             height: 180px;
@@ -969,6 +996,7 @@
             padding: 20px 26px;
             background: #fff;
             overflow: hidden;
+            transition: all 0.5s ease;
             .bg {
                 position: absolute;
                 top: 0;
@@ -979,21 +1007,36 @@
                 z-index: 1;
                 opacity: 0;
                 transition: all 0.3s ease;
-            }
-            &:nth-child(1) {
-                .bg {
-                    background: url(../images/technology-ul-li1-bg.jpg) no-repeat center;
-                    background-size: cover;
-                    animation: o-scale 20s linear infinite;
+                transform-origin: bottom bottom;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+                    background: linear-gradient(120deg, #029146 40%, transparent 100%);
                 }
             }
-            &:hover {
+            &.on {
+                width: 470px;
                 .bg {
                     opacity: 1;
                 }
+                .ic {
+                    opacity: 0;
+                    height: 0;
+                    margin-bottom: 20px;
+                }
                 .tit {
+               
                     color: #fff;
-                    transition: all 0.3s ease;
+            
                 }
                 .text {
                     color: #fff;
@@ -1010,27 +1053,21 @@
                     }
                 }
             }
-            &:nth-child(1) {
-                width: 470px;
-            }
+
             .ic {
                 position: relative;
                 z-index: 3;
                 margin-bottom: 16px;
                 width: 29px;
-                height: 24px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: all 0.3s ease;
+
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
-                }
-            }
-            &:nth-child(1) {
-                .tit {
-                    margin-top: 30px;
                 }
             }
             .tit {
@@ -1041,18 +1078,26 @@
                 font-weight: bold;
                 font-size: 20px;
                 color: #000;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                transition: all .3s ease;
             }
             .text {
                 position: relative;
                 z-index: 3;
                 margin: 10px 0 18px;
                 display: block;
-                white-space: pre;
 
                 line-height: 1;
                 font-family: MR;
                 font-size: 16px;
                 color: #666;
+
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                transition: all 0.3s ease;
             }
             .understand-details {
                 position: relative;
@@ -1112,13 +1157,13 @@
     .home-technology .technology-ul .item {
         width: 190px;
     }
-    .home-technology .technology-ul .item:nth-child(1) {
+    .home-technology .technology-ul .item.on {
         width: 370px;
     }
 }
 @media (max-width: 990px) {
     .home-technology {
-        height: 800px;
+        height: 900px;
     }
     .home-technology .plate-head {
         margin-top: 130px;
@@ -1126,28 +1171,17 @@
     .home-technology .technology-ul {
         margin-top: 110px;
     }
-    .home-technology .technology-ul .item {
+    .home-technology .technology-ul .item,
+    .home-technology .technology-ul .item.on,
+    .home-technology .technology-ul .item:hover {
         height: 170px;
-    }
-    .home-technology .technology-ul .item:nth-child(1) {
         width: 100%;
-        margin-bottom: 16px;
-    }
-    .home-technology .technology-ul .item:nth-child(2),
-    .home-technology .technology-ul .item:nth-child(3) {
-        width: calc(50% - 8px);
-    }
-    .home-technology .technology-ul .item:nth-child(3) {
-        margin-left: 16px;
-    }
-    .home-technology .technology-ul .item {
-        width: 50%;
-        margin: 0;
+        margin-bottom: 10px;
     }
 }
 @media (max-width: 768px) {
     .home-technology {
-        height: 680px;
+        height: 800px;
         background-position: right;
     }
     .home-technology .plate-head {

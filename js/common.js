@@ -422,6 +422,14 @@ jQuery(document).ready(function ($) {
     }
     $('.data-main').length && dataMain()
 
+    function technologyUl() {
+        $('.technology-ul .item').hover(function () {
+            let i = $(this).index()
+            $(this).addClass('on').siblings().removeClass('on')
+            $('#homeTecTab>div').eq(i).addClass('on').siblings().removeClass('on')
+        })
+    }
+    $('.technology-ul').length && technologyUl()
 
     function talentList() {
         $('.talent-list li .roof').click(function () {

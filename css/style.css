@@ -232,8 +232,8 @@
 .about-introduce {
   height: 925px;
   padding: 120px 0;
-  background: url(../images/about-introduce-bg.jpg) no-repeat center;
-  background-size: 1920px;
+  background: url(../images/about-introduce-bg.jpg) no-repeat center bottom;
+  background-size: cover;
 }
 .about-introduce .info {
   margin-bottom: 100px;
@@ -278,7 +278,7 @@
 }
 .about-introduce .data dl:hover dt strong {
   color: #06974b;
-  text-shadow: #2cc976 2px 12px 10px;
+  text-shadow: rgba(6, 151, 75, 0.6) 2px 8px 12px;
 }
 .about-introduce .data dl dt {
   font-size: 22px;
@@ -504,7 +504,7 @@
   background-size: contain;
 }
 .about-culture .wrapper .list .item .icon.icon2 {
-  background: url(../images/icon-about-culture2.png) no-repeat center left -15px;
+  background: url(../images/icon-about-culture2.png) no-repeat center;
   background-size: contain;
 }
 .about-culture .wrapper .list .item .icon.icon3 {
@@ -557,7 +557,7 @@
   background-size: contain;
 }
 .about-culture .wrapper .list .item:hover .icon.icon2 {
-  background: url(../images/icon-about-culture2-hover.png) no-repeat center left -15px;
+  background: url(../images/icon-about-culture2-hover.png) no-repeat center;
   background-size: contain;
 }
 .about-culture .wrapper .list .item:hover .icon.icon3 {
@@ -4611,8 +4611,8 @@
 }
 .swiper-product .swiper-pagination span {
   margin: 0 5px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background: none;
   border: 2px #d7d7d7 solid;
   transition: all 0.3s ease;
@@ -4623,7 +4623,7 @@
   width: 14px;
   height: 14px;
   background: linear-gradient(90deg, #17aa5d, #099b4f);
-  border:2px #17aa5d solid;
+  border-color: #17aa5d;
 }
 
 @media (max-width: 1440px) {

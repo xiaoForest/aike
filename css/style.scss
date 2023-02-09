@@ -263,8 +263,8 @@
 .about-introduce {
     height: 925px;
     padding: 120px 0;
-    background: url(../images/about-introduce-bg.jpg) no-repeat center;
-    background-size: 1920px;
+    background: url(../images/about-introduce-bg.jpg) no-repeat center bottom;
+    background-size: cover;
     .info {
         margin-bottom: 100px;
         display: flex;
@@ -309,7 +309,7 @@
                 dt {
                     strong {
                         color: #06974b;
-                        text-shadow: #2cc976 2px 12px 10px;
+                        text-shadow: rgba(6, 151, 75, 0.6) 2px 8px 12px;
                     }
                 }
             }
@@ -539,7 +539,7 @@
                         background-size: contain;
                     }
                     &.icon2 {
-                        background: url(../images/icon-about-culture2.png) no-repeat center left -15px;
+                        background: url(../images/icon-about-culture2.png) no-repeat center;
                         background-size: contain;
                     }
                     &.icon3 {
@@ -591,7 +591,7 @@
                             background-size: contain;
                         }
                         &.icon2 {
-                            background: url(../images/icon-about-culture2-hover.png) no-repeat center left -15px;
+                            background: url(../images/icon-about-culture2-hover.png) no-repeat center;
                             background-size: contain;
                         }
                         &.icon3 {
