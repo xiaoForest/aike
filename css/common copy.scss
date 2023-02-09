@@ -284,7 +284,7 @@ $green: #0d9f53;
                 .annulus {
                     .item {
                         background: #ebedf1;
-                        &:hover.item {
+                        &:hover.item-qr {
                             background: #259f3d;
                             .icon-svg {
                                 fill: #fff;
@@ -296,7 +296,6 @@ $green: #0d9f53;
                                 fill: #fff;
                             }
                         }
-                  
                     }
                 }
             }
@@ -338,6 +337,21 @@ $green: #0d9f53;
                     font-family: MN;
                     line-height: 1;
                     transition: all 0.3s ease;
+                }
+                @media screen and(min-width: 1025px) {
+                    &:hover {
+                        a.single {
+                            // color: #fff;
+                        }
+                    }
+                    &.active {
+                        a.single {
+                            // color: #fff;
+                            &:after {
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -507,6 +521,18 @@ $green: #0d9f53;
                     color: #555555;
                     &:before {
                         background-image: url("../images/icon-3-2.png");
+                    }
+                }
+                @media screen and(min-width: 1025px) {
+                    &:hover {
+                        a.single {
+                            color: $color;
+                        }
+                    }
+                    &.active {
+                        a.single {
+                            color: $color;
+                        }
                     }
                 }
             }
@@ -1101,8 +1127,6 @@ $green: #0d9f53;
 @media screen and (max-width: 768px) {
     .bottom-connection {
         height: 190px;
-        background: url(../images/bottom-connection-bg2.jpg) no-repeat;
-        background-size: cover;
     }
     .bottom-connection > div .info h4 {
         margin-bottom: 7px;

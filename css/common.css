@@ -42,16 +42,6 @@
   font-family: "MS";
   src: url("../fonts/MiSans-Semibold.ttf");
 }
-@-webkit-keyframes o-upfade-top {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes o-upfade-top {
   0% {
     opacity: 0;
@@ -62,28 +52,12 @@
     transform: translateY(0);
   }
 }
-@-webkit-keyframes o-scale {
-  0%, 85%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
 @keyframes o-scale {
   0%, 85%, 100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.2);
-  }
-}
-@-webkit-keyframes o-opacity {
-  0%, 30%, 60%, 100% {
-    opacity: 0;
-  }
-  15%, 45% {
-    opacity: 1;
   }
 }
 @keyframes o-opacity {
@@ -94,30 +68,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes o-scroll {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
 @keyframes o-scroll {
   0% {
     transform: translateY(-100%);
   }
   100% {
     transform: translateY(100%);
-  }
-}
-@-webkit-keyframes p-ani-2 {
-  from, to {
-    opacity: 1;
-    transform: none;
-  }
-  50% {
-    opacity: 1;
-    transform: translate3d(0, 12px, 0);
   }
 }
 @keyframes p-ani-2 {
@@ -130,42 +86,12 @@
     transform: translate3d(0, 12px, 0);
   }
 }
-@-webkit-keyframes p-ani-3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes p-ani-3 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes o-width {
-  0% {
-    width: 0;
-    left: 0;
-    right: auto;
-  }
-  60% {
-    width: 100%;
-    left: 0;
-    right: auto;
-  }
-  61% {
-    width: 100%;
-    left: auto;
-    right: 0;
-  }
-  100% {
-    width: 0%;
-    left: auto;
-    right: 0;
   }
 }
 @keyframes o-width {
@@ -190,16 +116,6 @@
     right: 0;
   }
 }
-@-webkit-keyframes p-ani-4 {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  70%, 100% {
-    opacity: 0;
-    transform: translateX(1vw);
-  }
-}
 @keyframes p-ani-4 {
   0% {
     opacity: 1;
@@ -208,14 +124,6 @@
   70%, 100% {
     opacity: 0;
     transform: translateX(1vw);
-  }
-}
-@-webkit-keyframes p-ani-5 {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
   }
 }
 @keyframes p-ani-5 {
@@ -277,15 +185,15 @@
 .header.changeHeader {
   background: #fff;
   height: 100px;
-  box-shadow: rgb(242, 242, 242) 0px 2px 2px 0px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .header.changeHeader .control .social .annulus .item {
   background: #ebedf1;
 }
-.header.changeHeader .control .social .annulus .item:hover.item-qr {
+.header.changeHeader .control .social .annulus .item:hover.item {
   background: #259f3d;
 }
-.header.changeHeader .control .social .annulus .item:hover.item-qr .icon-svg {
+.header.changeHeader .control .social .annulus .item:hover.item .icon-svg {
   fill: #fff;
 }
 .header.changeHeader .control .social .annulus .item:hover.item-tao {
@@ -332,11 +240,6 @@
   font-family: MN;
   line-height: 1;
   transition: all 0.3s ease;
-}
-@media screen and (min-width: 1025px) {
-  .header .control .nav li.active a.single:after {
-    transform: scaleX(1);
-  }
 }
 .header .control .social {
   display: flex;
@@ -488,14 +391,6 @@
 }
 .header.hover .nav li a.tel:before {
   background-image: url("../images/icon-3-2.png");
-}
-@media screen and (min-width: 1025px) {
-  .header.hover .nav li:hover a.single {
-    color: #c9171d;
-  }
-  .header.hover .nav li.active a.single {
-    color: #c9171d;
-  }
 }
 .header.hover .search {
   background-color: #c9171d;
@@ -780,12 +675,12 @@
     margin-bottom: 14px;
   }
   .searchHot li a,
-.searchOnly .con input,
-.searchOnly .text {
+  .searchOnly .con input,
+  .searchOnly .text {
     font-size: 14px;
   }
   .searchOnly .con .icon-svg,
-.searchOnly .con button {
+  .searchOnly .con button {
     width: 20px;
     height: 20px;
   }
@@ -859,7 +754,7 @@
     align-items: center;
   }
   .mHeader .mOpenSearch,
-.mHeader .mOpenMenu {
+  .mHeader .mOpenMenu {
     position: relative;
     display: flex;
     margin-left: 20px;
@@ -1043,6 +938,8 @@
 @media screen and (max-width: 768px) {
   .bottom-connection {
     height: 190px;
+    background: url(../images/bottom-connection-bg2.jpg) no-repeat;
+    background-size: cover;
   }
   .bottom-connection > div .info h4 {
     margin-bottom: 7px;

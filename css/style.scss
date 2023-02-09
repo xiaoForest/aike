@@ -305,6 +305,14 @@
         display: flex;
         justify-content: space-between;
         dl {
+            &:hover {
+                dt {
+                    strong {
+                        color: #06974b;
+                        text-shadow: #2cc976 2px 12px 10px;
+                    }
+                }
+            }
             dt {
                 font-size: 22px;
                 strong {
@@ -313,10 +321,7 @@
                     font-family: MR;
                     font-size: 66px;
                     font-weight: bold;
-                    &.special {
-                        color: #06974b;
-                        text-shadow: #2cc976 2px 12px 13px;
-                    }
+                    transition: all 0.3s ease;
                 }
                 span {
                     font-size: 34px;
@@ -1026,6 +1031,7 @@
                     li {
                         width: 33.33%;
                         .items {
+                            display: block;
                             position: relative;
                             margin: 0 0 30px 30px;
                             padding: 40px;
@@ -3324,14 +3330,14 @@
             margin-bottom: 2px;
             width: 48px;
             height: 48px;
-            background: #ebf0f5;
+            background: #e8f7ef;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
             cursor: pointer;
             .icon-svg {
-                fill: #96b5d7;
+                fill: #1caf62;
                 width: 22px;
                 height: 22px;
                 transition: all 0.3s ease;
@@ -4702,7 +4708,9 @@
     padding: 80px 0;
     height: 1246px;
     background: url(../images/product-parameter-bg.jpg) no-repeat center;
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     .product-headline {
         .tit {
             color: #fff;
@@ -4767,10 +4775,6 @@
                             &:nth-child(2) {
                                 margin-left: 10px;
                                 width: 80%;
-                                background: #1caf62;
-                                span {
-                                    color: #fff;
-                                }
                             }
                         }
                     }
@@ -4787,11 +4791,12 @@
                         justify-content: space-between;
 
                         .pic {
-                            display: block;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             img {
                                 width: 100%;
-                                height: 100%;
-                                object-fit: contain;
                             }
                         }
                     }
@@ -4899,6 +4904,8 @@
 @media (max-width: 768px) {
     .product-parameter {
         padding: 40px 0;
+        background-attachment: initial;
+        background-size: cover;
     }
     .swiper-product .swiper-container .swiper-wrapper .swiper-slide .case span {
         font-size: 14px;
@@ -4935,7 +4942,9 @@
     position: relative;
     height: 720px;
     background: url(../images/liveapp-bg.jpg) no-repeat center;
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     .row {
         height: 100%;
         .list {
@@ -5124,6 +5133,10 @@
     }
 }
 @media (max-width: 768px) {
+    .product-liveapp {
+        background-attachment: initial;
+        background-size: cover;
+    }
     .product-liveapp-wrap {
         padding-top: 50px;
     }
@@ -5134,7 +5147,7 @@
     .product-liveapp .row .list .item {
         width: 50%;
         height: auto;
-         border: 0 !important;
+        border: 0 !important;
     }
     .product-liveapp .row .list .item .box {
         justify-content: center;
@@ -5144,13 +5157,13 @@
     }
     .product-liveapp .row .list .item .box .text {
         width: 100%;
-        opacity: .9;
+        opacity: 0.9;
     }
     .product-liveapp .row .list .item .box {
         padding: 0 10px;
     }
     .product-liveapp .row .list .item .box .tit,
-    .product-liveapp .row .list .item .box .pic{
+    .product-liveapp .row .list .item .box .pic {
         opacity: 1;
     }
 }

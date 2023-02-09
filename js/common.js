@@ -80,6 +80,19 @@ jQuery(document).ready(function ($) {
         })
     }
 
+    if ($('.home-banner').length) {
+        $(window).scroll(function () {
+
+            let scrollTop = $(window).scrollTop();
+            let headHeight = $('.home-banner').height() / 2
+            if (scrollTop <= headHeight) {
+                $('.home-banner').removeClass('change')
+            } else {
+                $('.home-banner').addClass('change')
+            }
+        })
+    }
+
     function mHeader() {
         var $search = $('.searchTcWrap')
         if ($(window).width() < 1199) {
@@ -194,6 +207,7 @@ jQuery(document).ready(function ($) {
             // centeredSlides: true,
             mousewheel: true,
             slidesPerView: 2.5,
+            initialSlide: 2,
             spaceBetween: 30,
             parallax: true,
             loop: false,
@@ -289,8 +303,10 @@ jQuery(document).ready(function ($) {
     }
     $('.news-bannre').length && newsInit();
 
+    var productSwiper1 = null
+
     function productInit(id) {
-        var productSwiper1 = new Swiper(`${id} .swiper-container`, {
+        productSwiper1 = new Swiper(`${id} .swiper-container`, {
             speed: 800,
             parallax: true,
             spaceBetween: 10,
@@ -308,17 +324,32 @@ jQuery(document).ready(function ($) {
                 prevEl: $(`${id} .button-prev`),
                 nextEl: $(`${id} .button-next`),
             },
-            observer: true,//修改swiper自己或子元素时，自动初始化swiper
-            observeParents: true//修改swiper的父元素时，自动初始化swiper
+            observer: true, //修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true, //修改swiper的父元素时，自动初始化swiper
+            on: {
+                init: function (swiper) {
+                    // this.slides.length
+                    console.log(this.activeIndex)
+                },
+                slideChangeTransitionStart: function (swiper) {
+                    // this.slides.length
+                    console.log(this.activeIndex)
+                    $('.productTab .tab-nav li').eq(this.activeIndex).addClass('on').siblings().removeClass('on')
+                },
+            },
         });
     }
     $('.swiper-product-s1').length && productInit('.swiper-product-s1')
-    $('.swiper-product-s2').length && productInit('.swiper-product-s2')
-    $('.swiper-product-s3').length && productInit('.swiper-product-s3')
-    $('.swiper-product-s4').length && productInit('.swiper-product-s4')
-    $('.swiper-product-s5').length && productInit('.swiper-product-s5')
-    $('.swiper-product-s6').length && productInit('.swiper-product-s6')
-    $('.swiper-product-s7').length && productInit('.swiper-product-s7')
+
+    function productTab() {
+        $('.productTab .tab-nav li').on('click', function (i) {
+            let num = $(this).index()
+            productSwiper1.slideToLoop(num, 800, false);
+            $(this).addClass('on').siblings().removeClass('on')
+        })
+    }
+    $('.product-parameter').length && productTab();
+
 
     if ($('.m2lcWpr').length) {
         $(window).scroll(function () {
@@ -521,17 +552,6 @@ jQuery(document).ready(function ($) {
         render();
     }
 
-    addEventListener('resize', setSize);
+    $('.talent-occupation').length && addEventListener('resize', setSize);
     $('.talent-occupation').length && talentInit();
-
-    function productTab() {
-        $('.productTab .tab-nav li').on('click', function (i) {
-            let num = $(this).index()
-            $(this).addClass('on').siblings().removeClass('on')
-
-            $('.tab-row .boxes').eq(num).addClass('on').siblings().removeClass('on')
-        })
-    }
-    $('.product-parameter').length && productTab();
-
 })
