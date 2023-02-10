@@ -66,6 +66,27 @@ jQuery(document).ready(function ($) {
     })
 
     if (!$('.changeHeader').length) {
+
+        $('.subnav-desktop').show()
+        $('.nav-desktop a[data-toggle]').on('click', function (e) {
+            var $subnav = $($(this).attr('data-toggle'));
+
+            $(this).parent().toggleClass('on').siblings().removeClass('on')
+
+            $('header').addClass('changeHeader')
+            if (!$(this).parent().hasClass('on')) {
+                // $('header').removeClass('changeHeader')
+
+            }
+
+            if ($subnav.selector == '.toggle') {
+                $('.subnav-desktop').removeClass('active')
+                return false
+            }
+            $($subnav).toggleClass('active').siblings().removeClass('active')
+
+        });
+
         $(window).scroll(function () {
             let htmlHeight = $(window).height()
             let scrollTop = $(window).scrollTop();
