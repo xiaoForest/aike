@@ -65,41 +65,41 @@ jQuery(document).ready(function ($) {
         $('html').addClass('dom-loaded');
     })
 
-    if (!$('.changeHeader').length) {
 
-        $('.subnav-desktop').show()
-        $('.nav-desktop a[data-toggle]').on('click', function (e) {
-            var $subnav = $($(this).attr('data-toggle'));
 
-            $(this).parent().toggleClass('on').siblings().removeClass('on')
+    $('.subnav-desktop').show()
+    $('.nav-desktop a[data-toggle]').on('click', function (e) {
+        var $subnav = $($(this).attr('data-toggle'));
 
+        $(this).parent().toggleClass('on').siblings().removeClass('on')
+
+        $('header').addClass('changeHeader')
+        if (!$(this).parent().hasClass('on')) {
+            // $('header').removeClass('changeHeader')
+
+        }
+
+        if ($subnav.selector == '.toggle') {
+            $('.subnav-desktop').removeClass('active')
+            return false
+        }
+        $($subnav).toggleClass('active').siblings().removeClass('active')
+
+    });
+
+    $(window).scroll(function () {
+        let htmlHeight = $(window).height()
+        let scrollTop = $(window).scrollTop();
+        let headHeight = $('.headerTop').height()
+        if (scrollTop <= headHeight) {
+            $('header').removeClass('changeHeader')
+            $('.nav-desktop li').removeClass('on')
+            $('.subnav-desktop').removeClass('active')
+        } else {
             $('header').addClass('changeHeader')
-            if (!$(this).parent().hasClass('on')) {
-                // $('header').removeClass('changeHeader')
+        }
+    })
 
-            }
-
-            if ($subnav.selector == '.toggle') {
-                $('.subnav-desktop').removeClass('active')
-                return false
-            }
-            $($subnav).toggleClass('active').siblings().removeClass('active')
-
-        });
-
-        $(window).scroll(function () {
-            let htmlHeight = $(window).height()
-            let scrollTop = $(window).scrollTop();
-            let headHeight = $('.headerTop').height()
-            if (scrollTop <= headHeight) {
-                $('header').removeClass('changeHeader')
-                $('.nav-desktop li').removeClass('on')
-                $('.subnav-desktop').removeClass('active')
-            } else {
-                $('header').addClass('changeHeader')
-            }
-        })
-    }
 
     if ($('.home-banner').length) {
         $(window).scroll(function () {
@@ -583,4 +583,15 @@ jQuery(document).ready(function ($) {
 
     $('.talent-occupation').length && addEventListener('resize', setSize);
     $('.talent-occupation').length && talentInit();
+
+    function productNav() {
+        $('.product-nav .item ul li').hover(function () {
+            let num = $(this).index()
+            $(this).addClass('on').siblings().removeClass('on')
+            $(this).parents('.item').find('.pic-box a').eq(num).addClass('on').siblings().removeClass('on')
+
+        })
+    }
+    $('.product-nav').length && productNav();
+
 })
