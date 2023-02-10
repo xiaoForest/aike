@@ -73,8 +73,7 @@ jQuery(document).ready(function ($) {
     $('.nav-desktop a[data-toggle]').mouseover(function (e) {
         headHover = true
         if (headHover == true) {
-
-
+            $('.searchWrap').removeClass('show')
             var $subnav = $($(this).attr('data-toggle'));
             $($subnav).toggleClass('active').siblings().removeClass('active')
             $(this).parent().toggleClass('on').siblings().removeClass('on')
@@ -106,19 +105,37 @@ jQuery(document).ready(function ($) {
         }
     })
 
-
-    $(window).scroll(function () {
-        let htmlHeight = $(window).height()
-        let scrollTop = $(window).scrollTop();
-        let headHeight = $('.headerTop').height()
-        if (scrollTop <= headHeight) {
-            $('header').removeClass('changeHeader')
-            $('.nav-desktop li').removeClass('on')
-            $('.subnav-desktop').removeClass('active')
+    $('#onSearch').mouseenter(() => {
+        let _search = $('.searchWrap')
+        if (_search.hasClass('show')) {
+            _search.removeClass('show')
+            // $('header').removeClass('changeHeader')
         } else {
+            _search.addClass('show')
             $('header').addClass('changeHeader')
         }
     })
+    $('.searchWrap').mouseleave(() => {
+        $('.searchWrap').removeClass('show')
+        // $('header').removeClass('changeHeader')
+    })
+
+    function onChangeHeader(params) {
+        $(window).scroll(function () {
+            let htmlHeight = $(window).height()
+            let scrollTop = $(window).scrollTop();
+            let headHeight = $('.headerTop').height()
+            if (scrollTop <= headHeight) {
+                $('header').removeClass('changeHeader')
+                $('.nav-desktop li').removeClass('on')
+                $('.subnav-desktop').removeClass('active')
+            } else {
+                $('header').addClass('changeHeader')
+            }
+        })
+    }
+    $('.index-s1').length && onChangeHeader()
+
 
 
     if ($('.home-banner').length) {

@@ -93,11 +93,11 @@
                             <use xlink:href="#svg-tao"></use>
                         </svg>
                     </a>
-                    <a href="search.html" class="item">
+                    <div id="onSearch" class="item">
                         <svg class="icon-svg">
                             <use xlink:href="#svg-search"></use>
                         </svg>
-                    </a>
+                    </div>
                 </div>
 
             </div>
@@ -517,6 +517,36 @@
 
     </section>
 
+    <div class="searchWrap">
+        <div class="searchmod">
+            <div class="tit">
+                <span>搜索你想要找的</span>
+            </div>
+
+            <form method="get" id="searchform" action="/search.html">
+                <div class="input">
+
+                    <input type="hidden" name="type" value="news">
+
+                    <input name="keyword" value="" type="text" placeholder="请输入关键词检索相关内容">
+
+                    <svg class="icon-svg">
+
+                        <use xlink:href="#svg-search"></use>
+
+                    </svg>
+
+                </div>
+            </form>
+
+            <div class="keywordSearch">
+                <a class="item" href="">EMC技术服务</a>
+                <a class="item" href="">EMI电源滤波器</a>
+            </div>
+
+        </div>
+
+    </div>
 
     <header class="mHeader">
         <a class="logo" href="/"><img src="images/logo.png" alt=""></a>
