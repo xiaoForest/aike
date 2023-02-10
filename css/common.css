@@ -247,6 +247,9 @@
   align-items: center;
   justify-content: center;
 }
+.header .control .nav li a:hover {
+  color: #259f3d;
+}
 .header .control .nav li:after {
   position: absolute;
   bottom: 0;

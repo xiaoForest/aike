@@ -68,24 +68,44 @@ jQuery(document).ready(function ($) {
 
 
     $('.subnav-desktop').show()
-    $('.nav-desktop a[data-toggle]').on('click', function (e) {
-        var $subnav = $($(this).attr('data-toggle'));
+    let hover = false;
+    let headHover = true
+    $('.nav-desktop a[data-toggle]').mouseover(function (e) {
+        headHover = true
+        if (headHover == true) {
 
-        $(this).parent().toggleClass('on').siblings().removeClass('on')
 
-        $('header').addClass('changeHeader')
-        if (!$(this).parent().hasClass('on')) {
-            // $('header').removeClass('changeHeader')
-
+            var $subnav = $($(this).attr('data-toggle'));
+            $($subnav).toggleClass('active').siblings().removeClass('active')
+            $(this).parent().toggleClass('on').siblings().removeClass('on')
+            $('header').addClass('changeHeader')
+            if ($subnav.selector == '.toggle') {
+                $('.subnav-desktop').removeClass('active')
+                return false
+            }
         }
-
-        if ($subnav.selector == '.toggle') {
+    }).mouseleave(function () {
+        headHover = false
+        setTimeout(() => {
+            if (headHover == false) {
+                $('.subnav-desktop').removeClass('active')
+                $(this).parent().toggleClass('on').siblings().removeClass('on')
+                hover = false
+            }
+        }, 300)
+    })
+    $('.subnav-desktop').mouseenter(() => {
+        hover = false
+        headHover = true
+    }).mouseleave(() => {
+        if (hover == false) {
             $('.subnav-desktop').removeClass('active')
-            return false
+            $('.nav-desktop li').removeClass('on')
+            hover = false
+            headHover = false
         }
-        $($subnav).toggleClass('active').siblings().removeClass('active')
+    })
 
-    });
 
     $(window).scroll(function () {
         let htmlHeight = $(window).height()
@@ -228,11 +248,27 @@ jQuery(document).ready(function ($) {
             // centeredSlides: true,
             mousewheel: true,
             slidesPerView: 2.5,
-            initialSlide: 2,
+            // initialSlide: 2,
             spaceBetween: 30,
             parallax: true,
             loop: false,
             simulateTouch: true,
+            observer: true, //开启动态检查器
+            on: {
+                slideChangeTransitionEnd: function () {
+
+                },
+                observerUpdate: function () {
+                    // console.log('监测到Swiper 更新了');
+                },
+                transitionEnd: function (i) {
+                    // if (this.activeIndex == 3) {
+                    //     setTimeout(()=>{
+                    //         this.mousewheel = false
+                    //     },1000)
+                    // } 
+                },
+            },
             navigation: {
                 prevEl: $('.index-s3 .button-prev'),
                 nextEl: $('.index-s3 .button-next'),
@@ -248,7 +284,8 @@ jQuery(document).ready(function ($) {
                 },
                 768: {
                     slidesPerView: 1,
-                    spaceBetween: 20
+                    spaceBetween: 20,
+                    initialSlide: 2,
                 },
             },
             // autoplay: {

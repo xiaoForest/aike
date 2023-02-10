@@ -343,6 +343,9 @@ $green: #0d9f53;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    &:hover {
+                        color: #259f3d;
+                    }
                 }
                 &:after {
                     position: absolute;
