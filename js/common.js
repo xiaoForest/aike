@@ -1,10 +1,10 @@
 jQuery(document).ready(function ($) {
     let mlNav = $('.magnetic-levitation');
-    let h = 100
+    let h = 60
 
     function navMain() {
         var r = 0,
-            n = $(".header-light").length ? "light" : "dark";
+            n = $(".header").length ? "light" : "dark";
         $(window).on("scroll", function () {
             var t = $(this).scrollTop(),
                 u = $(".header-fixed").length,
@@ -55,6 +55,49 @@ jQuery(document).ready(function ($) {
     }
     $('.magnetic-levitation').length && navMain()
     $('.magnetic-levitation').length && scrollTo()
+
+
+    if ($('.second-nav-change').length) {
+        // $(window).scroll(function (e) {
+
+        //     let scrollTop = $(window).scrollTop();
+        //     let headHeight = $('.changeHeader').height()
+
+        //     if (scrollTop <= headHeight) {
+        //         $('.header').removeClass('change')
+        //         $('.second-nav-change').removeClass('change')
+        //     } else {
+        //         $('.header').addClass('change')
+        //         $('.second-nav-change').addClass('change')
+        //     }
+        // })
+        $(window).on("scroll", function () {
+            //记录开始滚动位置
+            var before = $(this).scrollTop();
+            $(window).on("scroll", function () {
+                //记录滚动之后的滚动位置变化
+                var after = $(this).scrollTop();
+                if (before > after) {
+                    // console.log("向上滚");
+                    $('.header').removeClass('change')
+                    $('.second-nav-change').removeClass('change')
+                    //把当前的滚动位置赋值给起始滚动位置
+                    before = after;
+                } else if (after > before) {
+                    // console.log("向下滚");
+                    //把当前的滚动位置赋值给起始滚动位置
+                    $('.header').addClass('change')
+                    $('.second-nav-change').addClass('change')
+                    before = after;
+                } else {
+                    console.log("error");
+                }
+            })
+        })
+
+    }
+
+
 
     var PC = $(window).width() > 1024,
         mobile = $(window).width() <= 768,
@@ -140,7 +183,6 @@ jQuery(document).ready(function ($) {
 
     if ($('.home-banner').length) {
         $(window).scroll(function () {
-
             let scrollTop = $(window).scrollTop();
             let headHeight = $('.home-banner').height() / 2
             if (scrollTop <= headHeight) {
@@ -469,6 +511,14 @@ jQuery(document).ready(function ($) {
             if ($(this).hasClass('on')) return false
             $(this).addClass('on').siblings().removeClass('on')
             $(this).parents('.emc-banner').toggleClass('on')
+        })
+    }
+
+    if ($('.emc-main-list').length) {
+        $('.emc-main-list li .btn').on('click', function (e) {
+            if ($(this).hasClass('on')) return false
+            $(this).addClass('on').siblings().removeClass('on')
+            $(this).parents('li').toggleClass('on')
         })
     }
 

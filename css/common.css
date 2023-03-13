@@ -184,8 +184,8 @@
 }
 .header.changeHeader {
   background: #fff;
-  height: 90px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  border-bottom: 1px #e6e6e6 solid;
 }
 .header.changeHeader .control .social .annulus .item {
   background: #ebedf1;
@@ -239,7 +239,7 @@
 .header .control .nav li a {
   height: 100%;
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
   font-family: MN;
   line-height: 1;
   transition: all 0.3s ease;
@@ -252,7 +252,7 @@
 }
 .header .control .nav li:after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: -10%;
   width: 0;
   height: 3px;
@@ -996,7 +996,7 @@
   z-index: 20;
 }
 .footer .footer-box {
-  height: 564px;
+  padding: 80px 0;
   margin: 0 auto;
   background: #3c4550;
   background-size: cover;
@@ -1005,9 +1005,6 @@
 .footer .footer-box > div {
   display: flex;
   justify-content: space-between;
-}
-.footer .footer-box > div .boxes {
-  margin-top: 118px;
 }
 .footer .footer-box > div .boxes:nth-child(1) {
   width: 100%;
@@ -1081,7 +1078,7 @@
 .footer .footer-copyright {
   background: #3a424a;
   border-top: 1px #3c4550 solid;
-  height: 105px;
+  padding: 20px 0;
 }
 .footer .footer-copyright > div {
   height: 100%;
@@ -1264,20 +1261,18 @@
   }
 }
 .subnav-desktop {
-  height: 480px;
-  border-top: 1px solid rgb(216, 220, 229);
-  background: #f9f9f9;
+  height: 360px;
+  background: #fff;
   overflow: hidden auto;
   display: none;
   align-items: center;
   position: fixed;
   z-index: -1;
   width: 100%;
-  top: 90px;
+  top: 80px;
   left: 0px;
   right: 0px;
   margin: 0px auto;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 5px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out 0s;
@@ -1298,22 +1293,11 @@
   display: flex;
 }
 .subnav-desktop .boxes:nth-child(1) {
-  padding-right: 64px;
+  padding-right: 0;
   border-right: 1px solid rgb(216, 220, 229);
-  background: #f5f5f5;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-}
-.subnav-desktop .boxes:nth-child(1)::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: -100vh;
-  width: 100vh;
-  height: 100%;
-  background: #f5f5f5;
 }
 .subnav-desktop .boxes:nth-child(3) {
   flex: 1 1 0%;
@@ -1322,10 +1306,10 @@
   justify-content: flex-end;
 }
 .subnav-desktop .groupinfo {
-  margin-top: 90px;
+  margin-top: 42px;
   overflow: hidden;
-  padding-right: 30px;
-  border-right: 4px #066736 solid;
+  padding-right: 90px;
+  border-right: 4px #259f3d solid;
 }
 .subnav-desktop .groupinfo .tit {
   text-align: right;
@@ -1334,14 +1318,14 @@
 }
 .subnav-desktop .groupinfo .summarize {
   text-align: right;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 .subnav-desktop .groupinfo .summarize p {
   color: #333;
-  font: 24px/1.4 ML;
+  font: 20px/1.3 ML;
 }
 .subnav-desktop .sublist {
-  margin: 70px 50px 0;
+  margin: 42px 50px 0;
   width: 100%;
 }
 .subnav-desktop .sublist li {
@@ -1350,7 +1334,6 @@
 .subnav-desktop .sublist li a {
   position: relative;
   height: 54px;
-  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1388,7 +1371,7 @@
   z-index: 2;
 }
 .subnav-desktop .subimg {
-  margin-top: 70px;
+  margin-top: 40px;
   width: 480px;
   height: 270px;
   border-radius: 10px;
@@ -1451,11 +1434,14 @@
 
 .subnavWrap {
   position: relative;
-  z-index: 99;
+  z-index: 102;
 }
 
 .changeHeader ~ .headerEmpty {
-  height: 90px;
+  height: 80px;
+}
+.changeHeader.change {
+  transform: translateY(-80px);
 }
 
 .learmMore {
@@ -1669,6 +1655,55 @@
 }
 .changeSd .product-nav .item ul li:hover .text, .changeSd .product-nav .item ul li.on .text {
   color: #259f3d;
+}
+
+.styleNav {
+  min-height: 320px;
+}
+.styleNav .product-nav-list {
+  background: #fff;
+}
+.styleNav .product-nav-list .change {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.styleNav .product-nav-list .change .item {
+  width: 100%;
+}
+.styleNav .product-nav-list .change .item + .item {
+  margin-left: 64px;
+}
+.styleNav .product-nav-list .change .item dl dd {
+  margin-bottom: 10px;
+  position: relative;
+  padding: 18px 0;
+  border-bottom: 1px #e6e6e6 solid;
+}
+.styleNav .product-nav-list .change .item dl dd a {
+  font-family: MR;
+  font-size: 20px;
+  color: #000;
+  white-space: pre;
+}
+.styleNav .product-nav-list .change .item dl dd:after {
+  position: absolute;
+  bottom: -1px;
+  width: 40px;
+  height: 1px;
+  background: #259f3d;
+  display: block;
+  content: "";
+}
+.styleNav .product-nav-list .change .item dl dt a {
+  line-height: 2.4;
+  font-family: ML;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  white-space: pre;
+}
+.styleNav .product-nav-list .change .item dl dt a:hover {
+  color: #000;
 }
 
 .searchWrap {
