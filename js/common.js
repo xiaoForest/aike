@@ -587,7 +587,7 @@ jQuery(document).ready(function ($) {
         });
         openInfo(_para, _img);
         var marker = new AMap.Marker({
-            icon: 'images/contact/location.png',
+            icon: 'http://aike.pousion.cn/template/default/index/images/contact/location.png',
             size: new AMap.Size(28, 35),
             offset: new AMap.Pixel(-28, -20),
             position: map.getCenter(),
